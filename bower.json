@@ -1,0 +1,11 @@
+{
+  "name": "jdm-v3",
+  "description": "Version 3 of my personal portfolio website",
+  "version": "3.0.0",
+  "homepage": "https://github.com/jamez14/jdm-v3",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "jquery": "~1.x.x"
+  }
+}
