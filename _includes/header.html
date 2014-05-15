@@ -1,7 +1,24 @@
+ {% assign current = page.url | downcase | split: '/' %}
+
 <header>
 
   <div class="header-title text-center">
-    <h1><a class="site-title" href="{{ site.baseurl }}/">James D. Mosier</a></h1>
+    <h1>
+      <a class="site-title" href="{{ site.baseurl }}/">
+        <span id="j">J</span>
+        <span id="a">a</span>
+        <span id="m">m</span>
+        <span id="e">e</span>
+        <span id="s">s</span>
+        <span id="d">D.</span>
+        <span id="m">M</span>
+        <span id="o">o</span>
+        <span id="s">s</span>
+        <span id="i">i</span>
+        <span id="e">e</span>
+        <span id="r">r</span>
+      </a>
+    </h1>
   </div>
 
 <!-- <div id="foo"></div> -->
@@ -13,16 +30,13 @@
 
     <ul>
       <li class="portfolio-li">
-        <a class="nav-link" href="/portfolio/">portfolio</a>
-        <span></span>
+        <a class="nav-link {% if current[1] == 'portfolio' %}active{% endif %}" href="/portfolio/">portfolio</a>
       </li>
       <li class="about-li">
-        <a class="nav-link" href="/about/">about</a>
-        <span></span>
+        <a class="nav-link {% if current[1] == 'about' %}active{% endif %}" href="/about/">about</a>
       </li>
-      <li class="contact-li">
-        <a class="nav-link" href="/contact/">contact</a>
-        <span></span>
+      <li class="contact-li last">
+        <a class="nav-link {% if current[1] == 'contact' %}active{% endif %}" href="/contact/">contact</a>
       </li>
     </div>
   </nav>
