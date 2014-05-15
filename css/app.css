@@ -15,23 +15,26 @@ html {
 
 header {
 	background-color: #fff;
-	box-shadow: 1px 2px 6px 0 rgba(0,0,0,.25);
+  border-right: 4px solid #52C69C;	
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.33);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, .33);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.33);
 	height: 100%;
-	width: 150px;
+	width: 170px;
 	position: fixed;
 	top: 0;
 	left: 0;
 	transition: width .5s ease;
-    -moz-transition: width .5s ease;
-    -webkit-transition: width .5s ease;
-    -o-transition: width .5s ease; 
-    -ms-transition: width .5s ease; 
-    z-index: 5;
+  -moz-transition: width .5s ease;
+  -webkit-transition: width .5s ease;
+  -o-transition: width .5s ease; 
+  -ms-transition: width .5s ease; 
+  z-index: 100;
 }
 
 	header:hover {
 		transition: width .5s ease;
-	    width: 225px;
+	   width: 230px;
 	}
 
 .header-title > h1 > a {
@@ -39,7 +42,7 @@ header {
   font-size: 20px;
 }
 
-nav {
+.site-nav {
   text-align: center;
 }  
 
@@ -49,7 +52,42 @@ nav {
   padding: 0;
 }
 
+  .site-nav li {
+    position: relative;
+  }
+
+    .site-nav li a {
+      /*color: #949494;*/
+      color: #fff;
+      font-size: 16px;      
+      padding: 15px;
+      display: block;
+      position: relative;
+      z-index: 500;
+    }
+
+.site-nav li span {
+  position: absolute;
+  left: 0;
+  top: -1px;
+  height: 48px;
+  width: 100%;
+}
+
+.portfolio-li span {
+  background-color: #F3C;
+}
+
+.about-li span {
+  background-color: #FF415C
+}
+
+.contact-li span {
+  background-color: #3AC8FF;
+}
+
 .menu-icon {
+  padding: 45px 0;
   text-align: center;
 }
 
