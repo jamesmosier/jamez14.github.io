@@ -1,3 +1,5 @@
+
+
 html { 
   background: url(/images/bg.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -32,6 +34,30 @@ header {
 	    width: 225px;
 	}
 
+.header-title > h1 > a {
+  color: #000;
+  font-size: 20px;
+}
+
+nav {
+  text-align: center;
+}  
+
 .site-nav ul {
 	list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
+
+.menu-icon {
+  text-align: center;
+}
+
+.bars-icon {
+  color: #000;
+  font-size: 32px;
+}
+
+  .bars-icon:before {
+    content: "\f0c9";
+  }
