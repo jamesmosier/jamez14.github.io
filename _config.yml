@@ -8,3 +8,6 @@ url: "http://jamesdmosier.com"
 # Build settings
 markdown: kramdown
 permalink: pretty
+
+#Exclude
+exclude: ['node_modules']

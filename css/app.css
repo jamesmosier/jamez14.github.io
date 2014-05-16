@@ -1,16 +1,11 @@
 
 
 html { 
-  background: url(/images/bg.jpg) no-repeat center center fixed; 
+  /*background: url(/images/bg.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
-/*   -webkit-filter: blur(3px); 
-   -moz-filter: blur(3px); 
-   -o-filter: blur(3px); 
-   -ms-filter: blur(3px); 
-   filter: blur(3px);*/
+  background-size: cover;*/
 }
 
 header {
@@ -117,6 +112,41 @@ header {
   margin-left: -100px;
   text-align: center;
 }
+
+
+
+/* PORTFOLIO */
+
+.posts-thumbs li {
+  float: left;
+  margin: 5px;
+  background: #fff;
+  padding: 8px;
+  position: relative;
+  -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.posts-thumbs li a,
+.posts-thumbs li a img {
+  display: block;
+  position: relative;
+}
+
+.posts-thumbs li a {
+  overflow: hidden;
+}
+
+.posts-thumbs li a div {
+  position: absolute;
+  background: rgba(75,75,75,0.7);
+  width: 100%;
+  height: 100%;
+}
+
+
+
 
 
 
