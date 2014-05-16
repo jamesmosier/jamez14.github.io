@@ -66,6 +66,7 @@ body {
   line-height: 1;
   position: relative;
   cursor: default;
+  -webkit-text-stroke: 0.2px;
 }
 
 a {
@@ -98,6 +99,7 @@ h6 {
   font-weight: 400;
   line-height: 1.1;
   color: inherit;
+  -webkit-text-stroke: 0.2px;
 }
 
 h1 {
