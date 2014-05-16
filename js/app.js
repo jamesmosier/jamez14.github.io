@@ -6,14 +6,13 @@
 			target: this
 		}, options );
 
-		var txt='This is what I want to type'.split('');
+		var txt = "I'm a front-end developer.".split('');
 
-		var delay=100;
-		for ( i=0; i<txt.length;i++){   
+		var delay = 50;
+		for ( i = 0; i < txt.length; i++){   
 			setTimeout(function(){        
 				$(settings.target).append(txt.shift() )
-			}, delay * i)       
-
+			}, delay * i )
 		}
 	}
 })(jQuery);

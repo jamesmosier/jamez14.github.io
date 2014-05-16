@@ -5,11 +5,14 @@ layout: default
   <div class="single">
     <section class="intro">
       <h1>Hi, I'm James Mosier</h1>
-      <h4>I'm a front-end developer.</h4>
+      <h4>I'm a <span data-typer-targets="front-end developer &middot; ux designer,mobile developer &middot; ui designer,c# programmer &middot; .net coder,ui designer &middot; ux designer,lover of the web &middot; occasional photographer, mobile developer &middot; web developer"></span>.</h4>
     </section>
   </div>
 </article>
 
+<!-- ui / ux design &middot; front-end development
+
+industrial design &middot; front-end development,product design &middot; front-end development,ui / ux design &middot; front-end development, ui / ux design &middot; mobile development, ui / ux design &middot; web development, ui / ux design &middot; front-end development -->
 
 <script type="text/javascript">
 $(window).resize(function(){
@@ -22,6 +25,9 @@ $(window).resize(function(){
 
 });
 
-// To initially run the function:
 $(window).resize();
+
+$(function () {
+  $("[data-typer-targets]").typer();
+});
 </script>
