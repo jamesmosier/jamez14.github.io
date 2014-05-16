@@ -42,58 +42,6 @@ header {
   font-size: 20px;
 }
 
-.site-title span {
-  margin: 0 -2px;
-}
-
-#j:hover {
-  color: #FC3;
-}
-
-#a:hover {
-  color: #1ED87D;
-}
-
-#m:hover {
-  color: #FF415C;
-}
-
-#e:hover {
-  color: #178CC6;
-}
-
-#s:hover {
-  color: #3AC8FF;
-}
-
-#d:hover {
-  color: #FF913A;
-}
-
-#m:hover {
-  color: #DF3333;
-}
-
-#o:hover {
-  color: #00D856;
-}
-
-#s:hover {
-  color: #7741E9;
-}
-
-#i:hover {
-  color: #F7E738;
-}
-
-#e:hover {
-  color: #F738BA;
-}
-
-#r:hover {
-  color: #4572FF;
-}
-
 .site-nav {
   text-align: center;
 }  
@@ -144,3 +92,32 @@ header {
   .bars-icon:before {
     content: "\f0c9";
   }
+
+
+/*  INDEX  */
+
+.home-wrapper {
+  margin-left: 170px;
+  position: relative;
+}
+
+/*.single {
+  width: auto;
+  float: none;
+  margin: 0;
+}*/
+
+.intro {
+  width: 345px;
+  height: 110px;
+  position:absolute;
+  left:50%;
+  top:50%;
+  margin-top:-50px;
+  margin-left: -100px;
+  text-align: center;
+}
+
+
+
+

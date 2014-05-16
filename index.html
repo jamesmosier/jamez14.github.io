@@ -1,5 +1,27 @@
 ---
 layout: default
 ---
+<article class="home-wrapper">
+  <div class="single">
+    <section class="intro">
+      <h1>Hi, I'm James Mosier</h1>
+      <h4>I'm a front-end developer.</h4>
+    </section>
+  </div>
+</article>
 
 
+<script type="text/javascript">
+$(window).resize(function(){
+
+    $('.intro').css({
+        position:'absolute',
+        left: ($(window).width() - $('.intro').outerWidth())/2,
+        top: ($(window).height() - $('.intro').outerHeight())/2
+    });
+
+});
+
+// To initially run the function:
+$(window).resize();
+</script>
