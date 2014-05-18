@@ -1,18 +1,37 @@
 (function($) {
 
-	$.fn.autotype = function (options) {
 
-		var settings = $.extend({            
-			target: this
-		}, options );
+	$.fn.portfolioResize = function () {
 
-		var txt = "I'm a front-end developer.".split('');
+		$(window).resize(function(){
 
-		var delay = 50;
-		for ( i = 0; i < txt.length; i++){   
-			setTimeout(function(){        
-				$(settings.target).append(txt.shift() )
-			}, delay * i )
-		}
+			var $wrapperWidth = $(this).width();
+
+			if ($wrapperWidth > 1200) {
+				$('.posts-thumbs li a img').css({
+			        width:($("[data-id='post-thumbs']").width() / 5)
+			    });
+			} else if ($wrapperWidth > 990) {
+				$('.posts-thumbs li a img').css({
+			        width:($("[data-id='post-thumbs']").width() / 4)
+			    });
+			} else if ($wrapperWidth < 480) {
+				$('.posts-thumbs li a img').css({
+			        width:($("[data-id='post-thumbs']").width() / 1)
+			    });
+			} else if ($wrapperWidth < 768) { 
+				$('.posts-thumbs li a img').css({
+			        width:($("[data-id='post-thumbs']").width() / 2)
+			    });
+			} else {
+			    $('.posts-thumbs li a img').css({
+			        width:($("[data-id='post-thumbs']").width() / 3)
+			    });
+			}
+		});
+
+		$(window).resize();
 	}
+
+
 })(jQuery);

@@ -130,8 +130,8 @@ header {
   .posts-thumbs li {
     background: #fff;
     float: left;
-    margin: 5px;
-    padding: 8px;
+    /*margin: 5px;
+    padding: 8px;*/
     position: relative;
     /*-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.1);
@@ -176,7 +176,7 @@ header {
 }   
 
 /*title is for a line that extends under the title*/
-  .post-thumb-title:after {
+/*  .post-thumb-title:after {
     background-color: #FFF;
     border-bottom: 3px solid #FFF;
     content: ' ';
@@ -184,7 +184,7 @@ header {
     position: absolute;
     bottom: 3.5em;
     width: 3em;
-  }
+  }*/
 
 
 
