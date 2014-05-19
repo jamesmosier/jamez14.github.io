@@ -20,10 +20,11 @@ permalink: /portfolio/
 
 
 <script type="text/javascript">
-	$(function () {
-	  $("[data-typer-targets]").typer();
+	$(function () {	  
+	  
+	  $("[data-id='post-thumbs'] > li ").each( function() { $(this).hoverdir(); } );
 	});
 
 	$("[data-id='post-thumbs']").portfolioResize();
 	
-</script>
+</script> 

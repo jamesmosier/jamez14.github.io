@@ -1,5 +1,48 @@
 ---
-layout: page
+layout: default
 title: Contact
 permalink: /contact/
 ---
+
+
+<div class="row-wrap contact-page">
+
+    <div class="column col-6">
+        <div id="contact-map" class="gmap"></div>
+    </div>
+
+    <div class="column col-6">
+        <form role="form" class="form-wrapper" method="post" action="">
+            <label for="name">name:</label>
+            <input type="text" name="Name" class="input-elem" id="name">
+
+            <label for="email">email:</label>
+            <input type="email" name="Email" class="input-elem" id="email">
+
+            <label for="phone">phone:</label>
+            <input type="tel" name="Phone" class="input-elem" id="phone">
+
+            <label for="message">message:</label>
+            <textarea name="message" class="input-elem input-textarea" id="message"></textarea>
+
+            <button type="button" class="btn btn-default">send</button>
+        </form>
+    </div>
+
+</div>
+
+
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJ_2Gtxlr4jeFuBup_jyRa5taZGk20JLs&sensor=false"></script>
+<script type="text/javascript">
+    google.maps.event.addDomListener(window, 'load', gmapInit);
+
+    function gmapInit() {
+        var mapOptions = {
+            zoom: 11,
+            center: new google.maps.LatLng(41.096642, -81.544071), 
+            styles: [{ "stylers": [{ "visibility": "off" }] }, { "featureType": "road", "stylers": [{ "visibility": "on" }, { "color": "#ffffff" }] }, { "featureType": "road.arterial", "stylers": [{ "visibility": "on" }, { "color": "#fee379" }] }, { "featureType": "road.highway", "stylers": [{ "visibility": "on" }, { "color": "#fee379" }] }, { "featureType": "landscape", "stylers": [{ "visibility": "on" }, { "color": "#f3f4f4" }] }, { "featureType": "water", "stylers": [{ "visibility": "on" }, { "color": "#7fc8ed" }] }, {}, { "featureType": "road", "elementType": "labels", "stylers": [{ "visibility": "off" }] }, { "featureType": "poi.park", "elementType": "geometry.fill", "stylers": [{ "visibility": "on" }, { "color": "#83cead" }] }, { "elementType": "labels", "stylers": [{ "visibility": "off" }] }, { "featureType": "landscape.man_made", "elementType": "geometry", "stylers": [{ "weight": 0.9 }, { "visibility": "off" }] }]        };
+        var mapElement = document.getElementById('contact-map');
+        var map = new google.maps.Map(mapElement, mapOptions);
+    }
+</script>
