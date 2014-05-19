@@ -9,6 +9,7 @@ html {
 }
 
 .page-content {
+  float: left;
   margin-left: 170px;
 }
 
@@ -167,7 +168,7 @@ header {
 
   .post-thumb-title span {
     display: block;
-    line-height: 23px;
+    line-height: 1;
     margin-top: -15px;
     position: absolute;
     top: 50%;
