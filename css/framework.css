@@ -204,7 +204,6 @@ img {
 label {
   display: inline-block;
   margin-bottom: 5px;
-  font-weight: bold;
 }
 
 .input-elem {
@@ -367,6 +366,27 @@ textarea.input-elem-lg {
   background-color: #5CB85C;
   border-color: #4CAE4C;
 }
+
+.button-hollow {
+  color: #666;
+  border: 3px solid #A5A5A5;
+  background: #FFF;
+  font-size: 20px;
+  line-height: normal;
+  padding: 10px 64px;
+  text-align: center;
+  vertical-align: middle;
+  width: auto;
+  height: auto;
+}
+
+  .button-hollow:hover {
+    color: #000;
+    border-color: #000;
+    -webkit-transition: -webkit-transform .5s,all .5s;
+    -moz-transition: -moz-transform .5s,all .5s;
+    transition: transform .5s,all .5s;
+  }
 
 .row-wrap {
   margin-right: -15px;
