@@ -6,10 +6,9 @@ html {
   background-size: cover;*/
 }
 
-body {
+/*body {
     overflow: visible!important;
-    min-height: 100%;
-}
+}*/
 
 .page-content {
     /*float: left;*/
@@ -187,7 +186,7 @@ header {
 .gmap {
     position: relative;
     float: left;
-    width: 45%;/*this is the issue!*/
+    width: 45%;
     height: 100%;
     margin: 0;
     padding: 0;
@@ -199,7 +198,6 @@ header {
 }
 
 .form-wrapper {
-    overflow: auto !important;
     float: left;
     padding: 10px;
     width: 55%;
