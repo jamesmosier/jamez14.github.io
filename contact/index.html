@@ -4,57 +4,71 @@ title: Contact
 permalink: /contact/
 ---
 
+<div id="map"></div>	
 
 
-<!-- <div class="row-wrap contact-page"> -->
+<div class="form-wrapper">
 
-	<div class="gmap">
-		<div id="map"></div>		
-	</div>
+	<div class="form-underlay"></div>
 
-	<div class="form-wrapper">
+	<div class="contact-info">
+		<h3>Hi! You can contact me a few different ways...</h3>
 
-		<div class="contact-info">
-			<p>Hi! You can contact me a few different ways...</p>
-			<p>Call me ... 330.819.3660</p>
-			<p>Email me ... <a href="mailto:james@jamesdmosier.com">james@jamesdmosier.com</a></p>
-			<p>Find me being social somewhere ...</p>
-			<p>Or you can send me a message below!</p>
+		<div class="contact-row">
+			<span class="contact-mode">Call me</span><span class="contact-data"> ... 330.819.3660</span>
 		</div>
 
-		<form role="form" method="post" action="">
+		<div class="contact-row">
+			<span class="contact-mode">Email me</span><span class="contact-data"> ... <a href="mailto:james@jamesdmosier.com">james@jamesdmosier.com</a></span>
+		</div>
 
-			<div class="form-row">
-				<label for="name">name:
-					<input type="text" name="Name" class="input-elem" id="name">
-				</label>
-			</div>
+		<div class="contact-row">
+			<span class="contact-mode">Find me being social somewhere</span> ...
+			<ul class="social-list">
+				<li><a href="https://github.com/jamez14" target="_blank"><i class="fa github-icon"></i></a></li>	
+				<li><a href="https://twitter.com/jamez14" target="_blank"><i class="fa twitter-icon"></i></a></li>	
+				<li><a href="http://lnkd.in/3meEdA" target="_blank"><i class="fa linkedin-icon"></i></a></li>	
+			</ul>
+		</div>
 
-			<div class="form-row">
-				<label for="email">email:
-					<input type="email" name="Email" class="input-elem" id="email">
-				</label>
-			</div>
+		<div class="contact-row">
+			<span class="h5"><em>Or you can send me a message below!</em></span>
+		</div>
 
-			<div class="form-row">
-				<label for="phone">phone:
-					<input type="tel" name="Phone" class="input-elem" id="phone">
-				</label>
-			</div>
-
-			<div class="form-row">
-				<label for="message">message:
-				<textarea name="message" class="input-elem input-textarea" id="message"></textarea>
-				</label>
-			</div>
-
-			<div class="form-row">
-				<button type="button" class="button-hollow">send</button>
-			</div>
-		</form>
 	</div>
 
-<!-- </div> -->
+	<form role="form" method="post" action="">
+
+		<div class="form-row">
+			<label for="name">name:
+				<input type="text" name="Name" class="input-elem" id="name">
+			</label>
+		</div>
+
+		<div class="form-row">
+			<label for="email">email:
+				<input type="email" name="Email" class="input-elem" id="email">
+			</label>
+		</div>
+
+		<div class="form-row">
+			<label for="phone">phone:
+				<input type="tel" name="Phone" class="input-elem" id="phone">
+			</label>
+		</div>
+
+		<div class="form-row">
+			<label for="message">message:
+			<textarea name="message" class="input-elem input-textarea" id="message"></textarea>
+			</label>
+		</div>
+
+		<div class="form-row text-center">
+			<button type="button" class="button-hollow">send</button>
+		</div>
+	</form>
+</div>
+
 
 
 
