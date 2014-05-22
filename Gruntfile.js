@@ -1,40 +1,60 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 
-  grunt.initConfig({
-    uglify: {
-      app_targets: {
-        files: {
-          '_site/js/app.min.js': ['js/app.js']
+    // Project Config
+    grunt.initConfig({
+        pkg: grunt.file.readJSON('package.json'),
+
+        watch: {
+            sass: {
+                files: ['sass/**.scss'],
+                tasks: 'sass:dev'
+            }
+        },
+
+        sass: {
+            dist: {
+                options: {
+                    outputStyle: 'compressed'
+                },
+                files: {
+                    'css/app.css': 'sass/app.scss'
+                }
+            },
+            dev: {
+                options: {
+                    style: 'expanded'
+                },
+                src: ['sass/app.scss'],
+                dest: 'css/app.css'
+            }
+        },
+
+        jekyll: {
+            dev: {
+                options: {
+                    serve: true,
+                    watch: true
+                }
+            }
+        },
+
+        concurrent: {
+            tasks: ['watch:sass', 'jekyll:dev'],
+            options: {
+                logConcurrentOutput: true
+            }
         }
-      }
-    },
-    cssmin: {
-      combine: {
-        files: {
-          '_site/css/app.min.css': ['lib/normalize.css', 'css/framework.css', 'css/app.css', 'css/responsive.css']
-        }
-      }
-    },
-    exec: {
-      build: {
-        cmd: 'jekyll build'
-      },
-      serve: {
-        cmd: 'jekyll serve --watch'
-      },
-      deploy: {
-        cmd: 'rsync --progress -a --delete -e "ssh -q" _site/ myuser@host:mydir/'
-      }
-    }
-  });
 
-grunt.loadNpmTasks('grunt-exec');
-grunt.loadNpmTasks('grunt-contrib-uglify');
-grunt.loadNpmTasks('grunt-contrib-cssmin');
+    });
 
 
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-sass');
+    grunt.loadNpmTasks('grunt-jekyll');
+    grunt.loadNpmTasks('grunt-concurrent');
 
-grunt.registerTask('default', [ 'exec:build', 'uglify', 'cssmin' ]);
-grunt.registerTask('deploy', [ 'default', 'exec:deploy' ]);
+   
+    grunt.registerTask('build', ['sass', 'jekyll']);
+    grunt.registerTask('default', ['build', 'concurrent'])
 
 };
