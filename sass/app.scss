@@ -287,10 +287,20 @@ header {
 
 
 
+/*  ABOUT  */
+#bg1 {
+  background: url(../images/bg.jpg) 0 0 no-repeat;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 
-
-
-
+#bg2 {
+  z-index: 49;
+  background-image: url(../images/akron.JPG);
+}
 
 
 

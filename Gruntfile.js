@@ -8,7 +8,15 @@ module.exports = function (grunt) {
             sass: {
                 files: ['sass/**.scss'],
                 tasks: 'sass:dev'
-            }
+            },
+            livereload: {
+                options: {
+                    livereload: {
+                        port: 4000
+                    }
+                },
+                files: ['css/*'],
+            },
         },
 
         sass: {
