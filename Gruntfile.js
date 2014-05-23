@@ -1,68 +1,60 @@
-module.exports = function (grunt) {
-
-    // Project Config
+module.exports = function(grunt) {
+ 
+    // All configuration goes here
     grunt.initConfig({
-        pkg: grunt.file.readJSON('package.json'),
-
-        watch: {
-            sass: {
-                files: ['sass/**.scss'],
-                tasks: 'sass:dev'
-            },
-            livereload: {
-                options: {
-                    livereload: {
-                        port: 4000
-                    }
-                },
-                files: ['css/*'],
-            },
+ 
+        jekyll: {
+            build : {
+                dest: '_site'
+            }
         },
-
+ 
         sass: {
             dist: {
-                options: {
-                    outputStyle: 'compressed'
-                },
                 files: {
                     'css/app.css': 'sass/app.scss'
                 }
-            },
-            dev: {
-                options: {
-                    style: 'expanded'
-                },
-                src: ['sass/app.scss'],
-                dest: 'css/app.css'
             }
         },
-
-        jekyll: {
-            dev: {
-                options: {
-                    serve: true,
-                    watch: true
+ 
+        watch: {
+            sass: {
+                files: 'sass/**/*.scss',
+                tasks: ['sass']
+            },
+            jekyll: {
+                files: ['_layouts/*.html', '_includes/*.md', 'css/app.css'],
+                tasks: ['jekyll']
+            }
+        },
+ 
+        browser_sync: {
+            files: {
+                src : ['_site/css/*.css']
+            },
+            options: {
+                watchTask: true,
+                ghostMode: {
+                    clicks: true,
+                    scroll: true,
+                    links: true,
+                    forms: true
+                },
+                server: {
+                    baseDir: '_site'
                 }
             }
-        },
-
-        concurrent: {
-            tasks: ['watch:sass', 'jekyll:dev'],
-            options: {
-                logConcurrentOutput: true
-            }
         }
-
+ 
     });
-
-
-    grunt.loadNpmTasks('grunt-contrib-watch');
+ 
+    // Load the plugins
     grunt.loadNpmTasks('grunt-sass');
+    grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-jekyll');
-    grunt.loadNpmTasks('grunt-concurrent');
-
-   
+    grunt.loadNpmTasks('grunt-browser-sync');
+ 
+    // Custom tasks
     grunt.registerTask('build', ['sass', 'jekyll']);
-    grunt.registerTask('default', ['build', 'concurrent'])
-
+    grunt.registerTask('default', ['build', 'browser_sync', 'watch']);
 };

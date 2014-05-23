@@ -663,7 +663,7 @@ textarea.input-elem-lg {
   height: 100%; }
 
 header {
-  background-color: white;
+  background-color: #222222;
   border-right: 4px solid #52c69c;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.33);
   -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.33);
@@ -682,10 +682,17 @@ header {
   header:hover {
     transition: width 0.5s ease;
     width: 230px; }
+    header:hover .header-title > h1 > a {
+      font-size: 24px;
+      color: white; }
 
 .header-title > h1 > a {
-  color: black;
-  font-size: 20px; }
+  color: #949494;
+  font-size: 20px;
+  -webkit-transition: color 0.5s, font-size 0.5s;
+  -moz-transition: color 0.5s, font-size 0.5s;
+  -o-transition: color 0.5s, font-size 0.5s;
+  transition: color 0.5s, font-size 0.5s; }
 
 .site-nav {
   text-align: center; }
@@ -891,3 +898,21 @@ header {
 #bg2 {
   z-index: 49;
   background-image: url(../images/akron.JPG); }
+
+.statement {
+  width: 80%;
+  left: 50%;
+  top: 1em;
+  margin-left: -40%;
+  padding: 2em;
+  background: #cccccc;
+  text-align: center;
+  border-radius: 1em;
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -o-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }

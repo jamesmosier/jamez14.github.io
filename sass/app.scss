@@ -22,7 +22,7 @@ background-size: cover;*/
 }
 
 header {
-  background-color: #fff;
+  background-color: #222;
   border-right: 4px solid #52C69C;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.33);
   -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.33);
@@ -41,12 +41,20 @@ header {
   &:hover {
     transition: width .5s ease;
     width: 230px;
+    .header-title > h1 > a {
+      font-size: 24px;
+      color: #fff;
+    }
   }
 }
 
 .header-title > h1 > a {
-  color: #000;
+  color: #949494;
   font-size: 20px;
+  -webkit-transition: color .5s, font-size .5s;
+  -moz-transition: color .5s, font-size .5s;
+  -o-transition: color .5s, font-size .5s;
+  transition: color .5s, font-size .5s;
 }
 
 .site-nav {
@@ -302,7 +310,23 @@ header {
   background-image: url(../images/akron.JPG);
 }
 
-
-
+.statement {
+  width: 80%;
+  left: 50%;
+  top: 1em;
+  margin-left: -40%;
+  padding: 2em;
+  background: #ccc;
+  text-align: center;
+  border-radius: 1em;
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -o-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
 @import 'responsive';

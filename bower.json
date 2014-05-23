@@ -6,6 +6,7 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "jquery": "~1.x.x"
+    "jquery": "~1.x.x",
+    "skrollr": "latest"
   }
 }
