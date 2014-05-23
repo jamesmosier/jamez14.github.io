@@ -1,5 +1,6 @@
 @import 'normalize';
 @import 'framework';
+@import 'mixins';
 
 
 html {
@@ -10,20 +11,18 @@ html {
 background-size: cover;*/
 }
 
-/*body {
-    overflow: visible!important;
-}*/
+$primary-color: #52c69c;
+
+
 
 .page-content {
-  /*float: left;*/
   padding-left: 170px;
-  /*width: 100%;*/
   height: 100%;
 }
 
 header {
   background-color: #222;
-  border-right: 4px solid #52C69C;
+  border-right: 4px solid $primary-color;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.33);
   -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.33);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.33);
@@ -32,17 +31,19 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  transition: width .5s ease;
-  -moz-transition: width .5s ease;
-  -webkit-transition: width .5s ease;
-  -o-transition: width .5s ease;
-  -ms-transition: width .5s ease;
   z-index: 9999;
+  @include transition-width();
   &:hover {
     transition: width .5s ease;
     width: 230px;
     .header-title > h1 > a {
       font-size: 24px;
+      color: #fff;
+    }
+    .site-nav a {
+      color: #fff;
+    }
+    .bars-icon {
       color: #fff;
     }
   }
@@ -51,10 +52,7 @@ header {
 .header-title > h1 > a {
   color: #949494;
   font-size: 20px;
-  -webkit-transition: color .5s, font-size .5s;
-  -moz-transition: color .5s, font-size .5s;
-  -o-transition: color .5s, font-size .5s;
-  transition: color .5s, font-size .5s;
+  @include font-size-color();
 }
 
 .site-nav {
@@ -77,8 +75,9 @@ header {
       display: block;
       position: relative;
       z-index: 500;
+      @include font-size-color();
       &:hover {
-        background-color: rgba(82, 198, 156, 0.53);
+        background-color: $primary-color;
         color: #FFF;
       }
     }
@@ -91,8 +90,9 @@ header {
 }
 
 .bars-icon {
-  color: #000;
+  color: #949494;
   font-size: 32px;
+  @include font-size-color();
   &:before {
     content: "\f0c9";
   }

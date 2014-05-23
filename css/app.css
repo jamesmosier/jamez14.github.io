@@ -653,13 +653,8 @@ textarea.input-elem-lg {
   width: 50%; }
 
 
-/*body {
-    overflow: visible!important;
-}*/
 .page-content {
-  /*float: left;*/
   padding-left: 170px;
-  /*width: 100%;*/
   height: 100%; }
 
 header {
@@ -673,23 +668,27 @@ header {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 9999;
   transition: width 0.5s ease;
   -moz-transition: width 0.5s ease;
   -webkit-transition: width 0.5s ease;
   -o-transition: width 0.5s ease;
-  -ms-transition: width 0.5s ease;
-  z-index: 9999; }
+  -ms-transition: width 0.5s ease; }
   header:hover {
     transition: width 0.5s ease;
     width: 230px; }
     header:hover .header-title > h1 > a {
       font-size: 24px;
       color: white; }
+    header:hover .site-nav a {
+      color: white; }
+    header:hover .bars-icon {
+      color: white; }
 
 .header-title > h1 > a {
   color: #949494;
   font-size: 20px;
-  -webkit-transition: color 0.5s, font-size 0.5s;
+  webkit-transition: color 0.5s, font-size 0.5s;
   -moz-transition: color 0.5s, font-size 0.5s;
   -o-transition: color 0.5s, font-size 0.5s;
   transition: color 0.5s, font-size 0.5s; }
@@ -711,9 +710,13 @@ header {
       padding: 15px;
       display: block;
       position: relative;
-      z-index: 500; }
+      z-index: 500;
+      webkit-transition: color 0.5s, font-size 0.5s;
+      -moz-transition: color 0.5s, font-size 0.5s;
+      -o-transition: color 0.5s, font-size 0.5s;
+      transition: color 0.5s, font-size 0.5s; }
       .site-nav li a:hover {
-        background-color: rgba(82, 198, 156, 0.53);
+        background-color: #52c69c;
         color: white; }
 
 .menu-icon {
@@ -721,8 +724,12 @@ header {
   text-align: center; }
 
 .bars-icon {
-  color: black;
-  font-size: 32px; }
+  color: #949494;
+  font-size: 32px;
+  webkit-transition: color 0.5s, font-size 0.5s;
+  -moz-transition: color 0.5s, font-size 0.5s;
+  -o-transition: color 0.5s, font-size 0.5s;
+  transition: color 0.5s, font-size 0.5s; }
   .bars-icon:before {
     content: "\f0c9"; }
 
