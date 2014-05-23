@@ -23,7 +23,9 @@
                 background: url('') no-repeat center center fixed; 
             {% elsif current[1] == 'about' %}
                 background: url('') no-repeat center center fixed; 
-            {%else%}
+            {% elsif current[1] == 'contact' %}
+                background: url('') no-repeat center center fixed; 
+            {% else %}
                 background: url(/images/bg.jpg) no-repeat center center fixed; 
             {% endif %}
             

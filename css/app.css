@@ -652,7 +652,6 @@ textarea.input-elem-lg {
 .col-6 {
   width: 50%; }
 
-
 .page-content {
   padding-left: 170px;
   height: 100%; }
@@ -823,7 +822,7 @@ header {
   height: 100%;
   z-index: 100; }
   .form-wrapper label {
-    color: #666666;
+    color: white;
     width: 100%; }
   .form-wrapper form {
     margin-top: 30px;
@@ -836,7 +835,7 @@ header {
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(66, 66, 66, 0.6); }
 
 .form-underlay {
-  background-color: rgba(182, 255, 229, 0.38);
+  background-color: rgba(58, 58, 58, 0.38);
   position: absolute;
   top: 0;
   left: 0;
@@ -844,28 +843,13 @@ header {
   height: 100%;
   z-index: 5; }
 
-.input-elem {
-  padding: 0 2px;
-  border: 0;
-  border-bottom: 1px solid #a5a5a5;
-  color: black;
-  border-radius: 0;
-  font-size: 15px;
-  outline: none;
-  -webkit-transition: -webkit-transform 0.5s, all 0.5s;
-  -moz-transition: -moz-transform 0.5s, all 0.5s;
-  transition: transform 0.5s, all 0.5s;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  margin-bottom: 15px; }
-
 .input-textarea {
   width: 100%;
   resize: none;
   padding: 5px 2px; }
 
 .contact-info {
+  color: white;
   position: relative;
   z-index: 10; }
 
@@ -876,7 +860,12 @@ header {
   font-size: 16px; }
 
 .contact-data {
+  color: black;
   font-size: 20px; }
+  .contact-data a {
+    color: black; }
+    .contact-data a:hover {
+      color: #52c69c; }
 
 .social-list {
   list-style: none;
@@ -888,38 +877,52 @@ header {
     padding-left: 5px;
     padding-right: 5px; }
   .social-list a {
-    color: #555555;
+    color: black;
     font-size: 32px; }
     .social-list a:hover {
-      color: #487062; }
+      color: #52c69c; }
+
+.contact-input {
+  background: rgba(0, 0, 0, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  font-size: 18px;
+  color: white;
+  color: rgba(255, 255, 255, 0.8);
+  -moz-transition: 0.4s ease-out;
+  -o-transition: 0.4s ease-out;
+  -webkit-transition: 0.4s ease-out;
+  transition: 0.4s ease-out;
+  width: 100%;
+  height: 45px;
+  padding: 10px 60px 10px 20px;
+  outline: none;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis; }
+
+textarea.contact-input {
+  height: 115px; }
 
 /*  ABOUT  */
 #bg1 {
-  background: url(../images/bg.jpg) 0 0 no-repeat;
+  background: url(../images/akron.jpg) 0 0 no-repeat;
   z-index: 50;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%; }
 
-#bg2 {
-  z-index: 49;
-  background-image: url(../images/akron.JPG); }
-
 .statement {
-  width: 80%;
-  left: 50%;
-  top: 1em;
-  margin-left: -40%;
-  padding: 2em;
-  background: #cccccc;
-  text-align: center;
+  background: #52c69c;
   border-radius: 1em;
+  margin: 0 auto;
+  margin-top: 80px;
+  padding: 2em;
+  top: 1em;
+  left: 50%;
+  text-align: center;
+  width: 80%;
   -webkit-transform-origin: 0 0;
   -moz-transform-origin: 0 0;
   -ms-transform-origin: 0 0;
   -o-transform-origin: 0 0;
-  transform-origin: 0 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
+  transform-origin: 0 0; }
