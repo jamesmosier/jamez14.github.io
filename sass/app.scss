@@ -4,6 +4,9 @@
 
 
 $primary-color: #52c69c;
+$primary-bright: #3dffb9;
+$dark-grey: #333;
+$darker-grey: #222;
 
 
 
@@ -12,8 +15,8 @@ $primary-color: #52c69c;
   height: 100%;
 }
 
-header {
-  background-color: #222;
+#header {
+  background-color: $darker-grey;
   border-right: 4px solid $primary-color;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.33);
   -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.33);
@@ -324,19 +327,27 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
+  position: fixed;
 }
 
-// #bg2 {
-//   z-index: 49;
-//   background-image: url(../images/akron.JPG);
-// }
+#bg2 {
+  z-index: 49;
+  background-image: url(../images/akron.JPG);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
 
 .statement {
   background: $primary-color;
   border-radius: 1em;
   margin: 0 auto;
   margin-top: 80px;
+  margin-left: -40%; 
   padding: 2em;
+  position: relative;
   top: 1em;
   left: 50%;
   text-align: center;
@@ -346,6 +357,90 @@ header {
   -ms-transform-origin: 0 0;
   -o-transform-origin: 0 0;
   transform-origin: 0 0;
+  z-index: 55;
+  p {
+    line-height: 1.4;
+  }
 }
+
+.gitcard {
+  width: 100%;
+  height: 100%;
+  padding-top: 10%;
+  text-align: center;
+  position: fixed;
+  z-index: 100;
+}
+
+
+/* POSTs */
+
+.post-content p {
+  line-height: 1.5;
+  padding: 0 40px;
+}
+
+.feature-image img {
+  width: 100%;
+}
+
+.post-intro {
+  background: $dark-grey;
+  color: #fff;
+  padding: 5% 0;
+  padding-top: 0;
+  text-align: center;
+  h1 {
+    background: $primary-color;
+    color: #fff;
+    margin-top: 0;
+    padding: 25px;
+  }
+  a {
+    color: $primary-color;
+    &:hover {
+      color: #3DFFB9;
+      text-decoration: underline;
+    }
+  }
+}
+
+.view-project {
+  color: #666666;
+  border: 3px solid #a5a5a5;
+  background: transparent;
+  display: inline-block;
+  font-size: 20px;
+  line-height: normal;
+  margin-top: 25px;
+  padding: 10px 64px;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  width: auto;
+  height: auto;
+  &:hover {
+    color: black;
+    border-color: black;
+    text-decoration: none !important;
+    -webkit-transition: -webkit-transform 0.5s, all 0.5s;
+    -moz-transition: -moz-transform 0.5s, all 0.5s;
+    transition: transform 0.5s, all 0.5s;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @import 'responsive';
