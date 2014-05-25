@@ -15,10 +15,9 @@ categories: portfolio
 	<p><a href="http://github.com/jamez14/trailfinder" target="_blank">TrailFinder</a> is an open source, AngularJS and Google Maps API &amp; Fusion Tables API driven application.</p> 
 	 <p>TrailFinder is a “passion project” of mine, based on my love of riding my bike on the local tow path(s) in the Northeast Ohio area. When I began to learn more about the local parks and towpaths, I realized I didn’t know the best (and fastest) way to hope on a trail and ride.</p>
 	 <p>TrailFinder is still under development. The future of the app includes making it accessable on iOS &amp; Android using the Phonegap framework.</p>
-	 <p>TrailFinder is available on <a href="http://github.com/jamez14/trailfinder" target="_blank">Github</a>.</p>
-	 <a href="http://github.com/jamez14/trailfinder" target="_blank" class="view-project">View Project</a>
+	 <a href="http://github.com/jamez14/trailfinder" target="_blank" class="view-project tooltip">View Project<span class="tool-title">on GitHub!</span></a>
 	 <!-- <p>Trail Finder allows the user to find the nearest tow path trail to them via geolocation (Google Maps API) and pulls data from a Google Fusion Table (Google Fusion API) full of names and coordinates. It then calculates the distance from the users location to the location of the nearest tow path trailheads.</p> -->
-
+<!-- <li><a class="tt-gplus" href="#"><span>Google Plus</span></a></li> -->
 
 </section>
 

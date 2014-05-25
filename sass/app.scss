@@ -1,12 +1,14 @@
-@import 'normalize';
-@import 'framework';
-@import 'mixins';
-
-
 $primary-color: #52c69c;
 $primary-bright: #3dffb9;
 $dark-grey: #333;
 $darker-grey: #222;
+
+
+
+@import 'normalize';
+@import 'framework';
+@import 'mixins';
+@import 'plugins';
 
 
 
@@ -332,7 +334,7 @@ $darker-grey: #222;
 
 #bg2 {
   z-index: 49;
-  background-image: url(../images/akron.JPG);
+  background: url(../images/self.jpg) no-repeat;
   top: 0;
   left: 0;
   width: 100%;
