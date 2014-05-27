@@ -354,7 +354,7 @@ textarea.input-elem-lg {
 .button-hollow {
   color: #666;
   border: 3px solid #A5A5A5;
-  background: #FFF;
+  background: rgba(255, 255, 255, 0.75);
   font-size: 20px;
   line-height: normal;
   padding: 10px 64px;
@@ -363,7 +363,8 @@ textarea.input-elem-lg {
   width: auto;
   height: auto;
   &:hover {
-    color: #000;
+    background: rgba(82, 198, 156, 0.18);
+    color: #fff;
     border-color: #000;
     -webkit-transition: -webkit-transform .5s,all .5s;
     -moz-transition: -moz-transform .5s,all .5s;

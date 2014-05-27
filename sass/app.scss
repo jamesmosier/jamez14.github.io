@@ -314,6 +314,11 @@ $darker-grey: #222;
   outline: none;
   -ms-text-overflow: ellipsis;
   text-overflow: ellipsis;
+  &:focus {
+    background: rgba(82, 198, 156, 0.18);
+    border-color: rgba(0, 0, 0, 0.35);
+    font-weight: bold;
+  }
 }
 
   textarea.contact-input {
