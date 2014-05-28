@@ -5,9 +5,12 @@ featured-image: /images/post-thumbs/trailfinder-iphone.png
 date:   2014-06-01 00:00:20
 categories: portfolio
 tags: 
-- foo 
-- bar
-- foobar
+- html5 
+- css3
+- angularjs
+- phonegap
+- googleApi
+- mobile
 ---
 
 <section class="feature-image">
