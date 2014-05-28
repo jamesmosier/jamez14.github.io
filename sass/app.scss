@@ -134,15 +134,13 @@ $darker-grey: #222;
   position: relative;
   li {
     background: #fff;
-    float: left;
-    position: relative;
     a {
       display: block;
       position: relative;
       img {
         display: block;
         position: relative;
-        width: 300px;
+        width: 100%;
       }
       overflow: hidden;
       div {

@@ -650,12 +650,10 @@ textarea.input-elem-lg {
 .column {
   float: left;
   position: relative;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px; }
+  min-height: 1px; }
 
-.col-6 {
-  width: 50%; }
+.col-3 {
+  width: 33.33%; }
 
 .tooltip {
   display: block;
@@ -829,9 +827,7 @@ textarea.input-elem-lg {
   padding: 0;
   position: relative; }
   .posts-thumbs li {
-    background: white;
-    float: left;
-    position: relative; }
+    background: white; }
     .posts-thumbs li a {
       display: block;
       position: relative;
@@ -839,7 +835,7 @@ textarea.input-elem-lg {
       .posts-thumbs li a img {
         display: block;
         position: relative;
-        width: 300px; }
+        width: 100%; }
       .posts-thumbs li a div {
         background: rgba(75, 75, 75, 0.7);
         position: absolute;
@@ -1066,3 +1062,13 @@ textarea.contact-input {
     -webkit-transition: -webkit-transform 0.5s, all 0.5s;
     -moz-transition: -moz-transform 0.5s, all 0.5s;
     transition: transform 0.5s, all 0.5s; }
+
+@media screen and (max-width: 320px) { }
+
+@media screen and (max-width: 480px) { }
+
+@media screen and (max-width: 768px) {
+  .col-3 {
+    width: 50%; } }
+
+@media screen and (max-width: 1024px) { }
