@@ -770,16 +770,17 @@ textarea.input-elem-lg {
       transition: border-color 300ms ease-out; }
     .tags a:after {
       content: "";
+      background: #222222;
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+      border-radius: 2px;
+      float: left;
       position: absolute;
       top: 10px;
       left: 0;
-      float: left;
       width: 4px;
       height: 4px;
-      -moz-border-radius: 2px;
-      -webkit-border-radius: 2px;
-      border-radius: 2px;
-      background: white;
       -moz-box-shadow: -1px -1px 2px #004977;
       -webkit-box-shadow: -1px -1px 2px #004977;
       box-shadow: -1px -1px 2px #004977;
