@@ -65,29 +65,33 @@
 }
 
 .tags {
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  right: 24px;
-  bottom: -12px;
-  list-style: none;
+    position: absolute;
+    left: 0;
+    bottom: 0;  
+    width: 162px;
+    z-index: 9999;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;        
+  }
   li {
     float: left;
+    font-size: 11px;
     height: 24px;
     line-height: 24px;
-    position: relative;
-    font-size: 11px;
+    position: relative;    
   }
   a {
-    float: left;
-    height: 24px;
-    line-height: 24px;
-    position: relative;
-    font-size: 11px;
-    margin-left: 20px;
-    padding: 0 10px 0 12px;
     background: $primary-color;
     color: #fff !important;
+    float: left;
+    font-size: 11px;
+    height: 24px;
+    line-height: 24px;      
+    margin-left: 20px;
+    padding: 0 10px 0 12px;
+    position: relative;
     text-decoration: none;
     -moz-border-radius-bottomright: 4px;
     -webkit-border-bottom-right-radius: 4px;

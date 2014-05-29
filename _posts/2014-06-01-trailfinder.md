@@ -24,11 +24,13 @@ tags:
 	 <p>TrailFinder is still under development. The future of the app includes making it accessable on iOS &amp; Android using the Phonegap framework.</p>
 	 <a href="http://github.com/jamez14/trailfinder" target="_blank" class="view-project tooltip">View Project<span class="tool-title">on GitHub!</span></a>
 	 <!-- <p>Trail Finder allows the user to find the nearest tow path trail to them via geolocation (Google Maps API) and pulls data from a Google Fusion Table (Google Fusion API) full of names and coordinates. It then calculates the distance from the users location to the location of the nearest tow path trailheads.</p> -->  	
-  	<ul class="tags">
-		{% for tag in page.tags %}
-			<li><a href="/tag/{{tag}}">{{ tag }}</a></li>
-		{% endfor %}
-	</ul>
+  	<aside class="tags">
+	  	<ul>
+			{% for tag in page.tags %}
+				<li><a href="/tag/{{tag}}" title="view all projects that pertain to {{tag}}">{{ tag }}</a></li>
+			{% endfor %}
+		</ul>
+	</aside>
 
 </section>
 
