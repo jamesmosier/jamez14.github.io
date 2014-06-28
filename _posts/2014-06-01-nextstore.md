@@ -2,7 +2,7 @@
 layout: post
 title:  NEXT (online store)
 featured-image: /images/post-thumbs/nextstore.png
-date:   2014-06-01 00:00:00
+date:   2014-06-01 00:00:05
 categories: portfolio
 tags: 
 - html5 
