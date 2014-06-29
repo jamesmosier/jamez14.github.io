@@ -4,18 +4,9 @@
   {% include head.html %}
 
     <body>
-    	{% assign current = page.url | downcase | split: '/' %}
-    	{% if current[1] == 'about' %}
-            <div id="bg1"></div>
-
-            <!-- <div id="bg2" data-500="background-position:0px 0px;" data-end="background-position:-500px -8000px;"></div> -->
-        {% endif %}
     	
     {% include header.html %}
 
-
-
-<!-- <div id="bg2" data-0="background-position:0px 0px;" data-end="background-position:-500px -8000px;"></div> -->
     <div class="page-content">
       {{ content }}
     </div>

@@ -28,6 +28,11 @@ layout: default
   {% endfor %}
 </ul>
 
+<div class="back-wrap">
+  <a href="javascript:void(0);"><span class="fa back-btn"></span> go back</a>
+</div>
+
+
 <script type="text/javascript">
   $(function () {   
     $("[data-id='post-tag-thumbs'] > li ").each( 
@@ -35,5 +40,11 @@ layout: default
         $(this).hoverdir(); 
       }
     );
+
+    $('.back-wrap a').click(function(){
+        parent.history.back();
+        return false;
+    });
+
   });
 </script> 

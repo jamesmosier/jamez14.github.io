@@ -198,6 +198,27 @@ $darker-grey: #222;
   }
 }
 
+.back-wrap {
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+  z-index: 9999;
+  a {
+    color: $primary-color;
+    &:hover {
+      color: $primary-bright;
+    }
+  }
+}
+
+.back-btn {
+  vertical-align: middle;
+  &:before {
+    content: "\f053";
+  }
+}
+
+
 /*title is for a line that extends under the title*/
 /*  .post-thumb-title:after {
     background-color: #FFF;

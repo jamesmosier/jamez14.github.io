@@ -22,7 +22,13 @@
             {% if current[1] == 'portfolio' %}
                 background: none; 
             {% elsif current[1] == 'about' %}
-                background: none; 
+                background: url(/images/akron.jpg) 0 0 no-repeat;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                position: fixed;
+                z-index: 50;
             {% elsif current[1] == 'contact' %}
                 background: none; 
             {% elsif current[1] == 'tag' %}

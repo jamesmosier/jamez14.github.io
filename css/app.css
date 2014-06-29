@@ -917,6 +917,21 @@ textarea.input-elem-lg {
     .tag_list li.archive_list .tag_list_link {
       font-size: 12px; }
 
+.back-wrap {
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+  z-index: 9999; }
+  .back-wrap a {
+    color: #52c69c; }
+    .back-wrap a:hover {
+      color: #3dffb9; }
+
+.back-btn {
+  vertical-align: middle; }
+  .back-btn:before {
+    content: "\f053"; }
+
 /*title is for a line that extends under the title*/
 /*  .post-thumb-title:after {
     background-color: #FFF;
