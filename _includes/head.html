@@ -20,19 +20,20 @@
     <style type="text/css" >
         html {            
             {% if current[1] == 'portfolio' %}
-                background: url('') no-repeat center center fixed; 
+                background: none; 
             {% elsif current[1] == 'about' %}
-                background: url('') no-repeat center center fixed; 
+                background: none; 
             {% elsif current[1] == 'contact' %}
-                background: url('') no-repeat center center fixed; 
+                background: none; 
+            {% elsif current[1] == 'tag' %}
+                background: #52c69c; 
             {% else %}
                 background: url(/images/bg.jpg) no-repeat center center fixed; 
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
             {% endif %}
-            
-              -webkit-background-size: cover;
-              -moz-background-size: cover;
-              -o-background-size: cover;
-              background-size: cover;
         }
     </style>
 

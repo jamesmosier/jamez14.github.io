@@ -717,7 +717,7 @@ textarea.input-elem-lg {
     bottom: 70px; }
 
 .tags {
-  position: absolute;
+  position: fixed;
   left: 0;
   bottom: 0;
   width: 162px;
@@ -884,7 +884,7 @@ textarea.input-elem-lg {
   color: white;
   font-size: 32px;
   text-align: center; }
-  .post-thumb-title span {
+  .post-thumb-title .the-title {
     display: block;
     line-height: 1;
     margin-top: -15px;
@@ -892,6 +892,30 @@ textarea.input-elem-lg {
     top: 50%;
     text-align: center;
     width: 100%; }
+
+.tag-heading {
+  color: white;
+  margin-left: 10px; }
+
+.tag_list {
+  list-style-type: none;
+  position: absolute;
+  bottom: 5px;
+  padding-left: 0; }
+  .tag_list li.archive_list {
+    background: none;
+    border-right: 1px solid white;
+    float: left;
+    font-size: 12px;
+    padding-left: 7px;
+    padding-right: 7px; }
+    .tag_list li.archive_list:hover {
+      color: #3dffb9;
+      border-right: 1px solid white; }
+    .tag_list li.archive_list:last-child {
+      border-right: none; }
+    .tag_list li.archive_list .tag_list_link {
+      font-size: 12px; }
 
 /*title is for a line that extends under the title*/
 /*  .post-thumb-title:after {
