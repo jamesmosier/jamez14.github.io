@@ -843,6 +843,9 @@ textarea.input-elem-lg {
 .linkedin-icon:before {
   content: "\f0e1"; }
 
+.instagram-icon:before {
+  content: "\f16d"; }
+
 /*  INDEX  */
 .home-wrapper {
   margin-left: 170px;
