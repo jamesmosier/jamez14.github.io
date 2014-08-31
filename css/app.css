@@ -1082,14 +1082,8 @@ textarea.contact-input {
   width: 46%; }
 
 .statement {
-  background: #52c69c;
-  border-radius: 1em;
-  margin-top: 15%;
-  margin-left: 2%;
-  margin-right: 4%;
-  padding: 2em;
-  text-align: center;
-  z-index: 55; }
+  font-size: 3.6vw;
+  width: 100%; }
   .statement p {
     line-height: 1.4; }
 

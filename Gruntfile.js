@@ -1,14 +1,13 @@
 module.exports = function(grunt) {
- 
-    // All configuration goes here
+
     grunt.initConfig({
- 
+
         jekyll: {
-            build : {
+            build: {
                 dest: '_site'
             }
         },
- 
+
         sass: {
             dist: {
                 files: {
@@ -16,7 +15,7 @@ module.exports = function(grunt) {
                 }
             }
         },
- 
+
         watch: {
             sass: {
                 files: 'sass/**/*.scss',
@@ -31,10 +30,10 @@ module.exports = function(grunt) {
                 tasks: ['uglify']
             }
         },
- 
+
         browser_sync: {
             files: {
-                src : ['_site/css/*.css']
+                src: ['_site/css/*.css']
             },
             options: {
                 watchTask: true,
@@ -50,11 +49,11 @@ module.exports = function(grunt) {
             }
         },
         cssmin: {
-          combine: {
-            files: {
-              '_site/css/app.min.css': ['_site/css/app.css']
+            combine: {
+                files: {
+                    '_site/css/app.min.css': ['_site/css/app.css']
+                }
             }
-          }
         },
         uglify: {
             my_target: {
@@ -64,9 +63,9 @@ module.exports = function(grunt) {
                 }
             }
         }
- 
+
     });
- 
+
     // Load the plugins
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
@@ -74,7 +73,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-browser-sync');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
- 
+
     // Custom tasks
     grunt.registerTask('build', ['sass', 'jekyll', 'cssmin', 'uglify']);
     grunt.registerTask('default', ['build', 'browser_sync', 'watch']);

@@ -419,14 +419,16 @@ $darker-grey: #222;
 }
 
 .statement {
-  background: $primary-color;
-  border-radius: 1em;
-  margin-top: 15%;
-  margin-left: 2%;
-  margin-right: 4%;
-  padding: 2em;
-  text-align: center;
-  z-index: 55;
+  // background: $primary-color;
+  // border-radius: 1em;
+  // margin-top: 15%;
+  // margin-left: 2%;
+  // margin-right: 4%;
+  // padding: 2em;
+  // text-align: center;
+  // z-index: 55;
+  font-size: 3.6vw;
+  width: 100%;
   p {
     line-height: 1.4;
   }
