@@ -48,6 +48,7 @@ module.exports = function(grunt) {
                 }
             }
         },
+
         cssmin: {
             combine: {
                 files: {
@@ -55,6 +56,7 @@ module.exports = function(grunt) {
                 }
             }
         },
+        
         uglify: {
             my_target: {
                 files: {
@@ -63,6 +65,14 @@ module.exports = function(grunt) {
                 }
             }
         }
+
+        // uncss: {
+        //   dist: {
+        //     files: {
+        //       '_site/css/tidy.css': ['_site/index.html', '_site/about/index.html', '_site/portfolio/index.html', '_site/contact/index.html']
+        //     }
+        //   }
+        // }
 
     });
 
@@ -73,6 +83,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-browser-sync');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    // grunt.loadNpmTasks('grunt-uncss');
 
     // Custom tasks
     grunt.registerTask('build', ['sass', 'jekyll', 'cssmin', 'uglify']);

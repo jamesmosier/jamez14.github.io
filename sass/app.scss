@@ -400,16 +400,6 @@ $darker-grey: #222;
   position: fixed;
 }
 
-.about {
-  position: relative;
-  a {
-    color: #fff;
-    &:hover {
-      color: #999;
-    }
-  }
-}
-
 .col {
   float: left;
   position: relative;
@@ -418,34 +408,29 @@ $darker-grey: #222;
   width: 46%;
 }
 
-.statement {
-  // background: $primary-color;
-  // border-radius: 1em;
-  // margin-top: 15%;
-  // margin-left: 2%;
-  // margin-right: 4%;
-  // padding: 2em;
-  // text-align: center;
-  // z-index: 55;
-  font-size: 3.6vw;
-  width: 100%;
+.some-words {
+  margin: auto;
+  position: absolute;
+  top: 0; 
+  left: 0; 
+  bottom: 0; 
+  right: 0;
+  overflow: visible;
+  width: 50%;
+  height: 50%;
+  z-index: 1;
   p {
+    font-size: 1.2rem;
     line-height: 1.4;
   }
-}
-
-.gitcard {
-  margin-top: 10%;
-  z-index: 80;
-}
-
-
-.col-left {
-
-}
-
-.col-right {
-
+  a {
+    color: $primary-color;
+    text-decoration: underline;
+    &:hover {
+      color: $primary-bright;
+      text-decoration: none;
+    }
+  }
 }
 
 
@@ -504,6 +489,7 @@ $darker-grey: #222;
     transition: transform 0.5s, all 0.5s;
   }
 }
+
 
 
 
