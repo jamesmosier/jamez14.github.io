@@ -12,6 +12,15 @@ layout: default
 
  
 <script type="text/javascript">
+$(window).load(function() {
+  $('.intro').css({
+      position:'absolute',
+      left: ($(".home-wrapper").width() - $('.intro').outerWidth()) / 2,
+      top: ($(window).height() - $('.intro').outerHeight()) / 2
+  });
+});
+
+
 $(window).resize(function(){
 
     $('.intro').css({
@@ -23,6 +32,7 @@ $(window).resize(function(){
 });
 
 $(window).resize();
+
 
 $(function () {
   $("[data-typer-targets]").typer();

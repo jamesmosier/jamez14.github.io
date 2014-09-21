@@ -30,4 +30,18 @@
 
 <script type="text/javascript" src="/lib/jquery.typer.js"></script>
 <script type="text/javascript" src="/lib/jquery.hoverdir.js"></script>
-<!-- <script src="//localhost:4000/livereload.js"></script> -->
+
+
+<script type="text/javascript" src="/lib/headroom/headroom.min.js"></script>
+
+<script type="text/javascript">
+    var theHeader = document.getElementById("header-mobile");
+    new Headroom(theHeader, { offset: 130, tolerance: 9 }).init();
+
+    $(document).ready(function() {
+      $("#mobile-menu-icon").click(function() {
+          $(".mobile-menu").slideToggle(500);
+      });
+    });
+
+</script>

@@ -1,6 +1,6 @@
  {% assign current = page.url | downcase | split: '/' %}
 
-<header id="header">
+ <header id="header">
 
   <div class="header-title text-center">
     <h1>
@@ -29,3 +29,31 @@
   </nav>
 
 </header>
+
+
+<header id="header-mobile">
+  <div class="hambuger">
+    <a class="menu-icon" id="mobile-menu-icon">
+      <i class="fa bars-icon"></i>
+    </a> 
+  </div>
+  <div class="header-mobile-title">
+    <a class="site-title" href="{{ site.baseurl }}/">
+      James D. Mosier
+    </a>
+  </div>
+</header>
+
+<div class="mobile-menu">
+  <ul>
+    <li class="portfolio-li">
+      <a class="nav-link {% if current[1] == 'portfolio' %}active{% endif %}" href="/portfolio/">portfolio</a>
+    </li>
+    <li class="about-li">
+      <a class="nav-link {% if current[1] == 'about' %}active{% endif %}" href="/about/">about</a>
+    </li>
+    <li class="contact-li last">
+      <a class="nav-link {% if current[1] == 'contact' %}active{% endif %}" href="/contact/">contact</a>
+    </li>   
+  </ul> 
+</div>

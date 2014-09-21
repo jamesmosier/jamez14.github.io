@@ -1,9 +1,23 @@
 @media screen and (max-width: 320px) { // iPhone portrait
- 
+
 }
  
 @media screen and (max-width: 480px) { // iPhone landscape
- 
+ 	
+ 	#header {
+ 		display: none;
+ 		visibility: hidden;
+ 	}
+
+ 	#header-mobile {
+ 		display: block;
+ 	}
+
+ 	.page-content {
+ 		padding-top: 50px;
+ 		padding-left: 0;
+ 	}
+
 }
  
 @media screen and (max-width: 768px) { // iPad portrait
