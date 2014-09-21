@@ -67,7 +67,7 @@ if (isset($_POST['email'])) {
 	<div class="form-underlay"></div>
 
 	<div class="contact-info">
-		<h3>Hi! You can contact me a few different ways...</h3>
+		<h3 class="hidden-phone">Hi! You can contact me a few different ways...</h3>
 
 		<div class="contact-row">
 			<span class="contact-mode">Email me</span><span class="contact-data"> ... <a href="mailto:james@jamesdmosier.com">james@jamesdmosier.com</a></span>
@@ -83,7 +83,7 @@ if (isset($_POST['email'])) {
 			</ul>
 		</div>
 
-		<div class="contact-row">
+		<div class="contact-row hidden-phone">
 			<span class="h5"><em>Or you can send me a message below!</em></span>
 		</div>
 

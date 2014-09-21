@@ -1,5 +1,13 @@
 @media screen and (max-width: 320px) { // iPhone portrait
 
+	.hidden-phone {
+ 		display: none;
+ 		visibility: hidden;
+ 	}
+
+ 	.form-wrapper form {
+		margin-top: 0;
+	}
 }
  
 @media screen and (max-width: 480px) { // iPhone landscape
@@ -16,6 +24,27 @@
  	.page-content {
  		padding-top: 50px;
  		padding-left: 0;
+ 	}
+
+ 	.some-words {
+ 		width: auto;
+		height: auto;
+		padding: 15px;
+		overflow: scroll;
+ 	}
+
+ 	.form-wrapper {
+ 		padding: 15px;
+ 		padding-top: 5px;
+ 		width: 100%;
+ 	}
+
+ 	.contact-info h3 {
+ 		font-size: 18px;
+ 	}
+
+ 	.social-list {
+ 		margin-left: 40px;
  	}
 
 }
