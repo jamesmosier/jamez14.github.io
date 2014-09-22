@@ -219,6 +219,10 @@ $darker-grey: #222;
   content: "\f16d";
 }
 
+.fa-chevron-left:before {
+  content: "\f053";
+}
+
 /*  INDEX  */
 
 .home-wrapper {
@@ -603,6 +607,9 @@ $darker-grey: #222;
   visibility: hidden !important;
 }
 
+.go-back {
+  display: none;
+}
 
 
 

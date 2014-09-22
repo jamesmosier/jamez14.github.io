@@ -8,6 +8,10 @@
  	.form-wrapper form {
 		margin-top: 0;
 	}
+
+	.intro {
+		width: 285px;
+	}
 }
  
 @media screen and (max-width: 480px) { // iPhone landscape
@@ -47,6 +51,42 @@
  		margin-left: 40px;
  	}
 
+ 	.post-thumb-title {
+		font-size: 16px;
+	}
+
+	#map {
+		padding-bottom: 9999px;
+		margin-bottom: -9999px;
+	}
+
+	.form-underlay {
+		padding-bottom: 9999px;
+		margin-bottom: -9999px;
+		overflow: hidden;
+	}
+
+	aside.tags {
+		display: none;
+		visibility: hidden;
+	}
+
+	.post-content {
+		position: relative;
+	}
+
+	.post-intro {
+		padding-bottom: 10%;
+	}
+
+	.go-back {
+		display: block;
+		position: absolute;
+		bottom: 5px;
+		left: 5px;
+		color: #52c69c;
+	}
+
 }
  
 @media screen and (max-width: 768px) { // iPad portrait
@@ -54,6 +94,7 @@
 	.col-3 {
 		width: 50%;
 	}
+
 
 }
  

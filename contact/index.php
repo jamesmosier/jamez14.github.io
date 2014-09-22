@@ -83,7 +83,7 @@ if (isset($_POST['email'])) {
 			</ul>
 		</div>
 
-		<div class="contact-row hidden-phone">
+		<div class="contact-row">
 			<span class="h5"><em>Or you can send me a message below!</em></span>
 		</div>
 
