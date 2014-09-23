@@ -1352,6 +1352,11 @@ textarea.contact-input {
 .go-back {
   display: none; }
 
+.success-msg {
+  padding: 15px;
+  background: rgba(82, 198, 156, 0.5);
+  border-radius: 5px; }
+
 @media screen and (max-width: 320px) {
   .hidden-phone {
     display: none;

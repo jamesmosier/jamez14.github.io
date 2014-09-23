@@ -1,21 +1,25 @@
-
+---
+layout: default
+title: Contact Test
+permalink: /contact/test.php
+---
 <?php
 
 function spamcheck($field)
 {
     $field = filter_var($field, FILTER_SANITIZE_EMAIL);
-    
+
     if (filter_var($field, FILTER_VALIDATE_EMAIL)) {
         return TRUE;
     }
-    
+
     else {
         return FALSE;
     }
 }
 
 if (isset($_POST['email'])) {
-    
+
     $mailcheck = spamcheck($_POST['email']);
     if ($mailcheck == FALSE) {
         $submit_message = "Please input your information again.";
@@ -29,13 +33,13 @@ if (isset($_POST['email'])) {
         $message = $_POST['message'];
         $headers = "From: James D Mosier Portfolio Site";
         $subject = "From: $fullname";
-        
+
         $msg = "Email: $email\nPhone Number: $phone\nMessage: $message";
         mail("james@jamesdmosier.com", $subject, $msg, $headers);
-        
+
         //mail("james@jamesdmosier.com", "From: $name", "Email: $email", "Phone Number: $phone", "Message: $message");
         //mail("james@jamesdmosier.com", $subject, $email, $phone, $message, $headers);
-        
+
         $submit_message = "Thank you for your message, I will get back to you very soon!";
     }
 }
@@ -44,7 +48,7 @@ if (isset($_POST['email'])) {
 <?php if( $submit_message ){ ?>
 <script type="text/javascript">
     jQuery(window).load(function(){
-        //alert('<?php echo $submit_message; ?>');                
+        //alert('<?php echo $submit_message; ?>');
         $('.alert-success').show();
     });
 </script>
@@ -53,15 +57,15 @@ if (isset($_POST['email'])) {
 
 
 
-        <!-- <div class="contact-row">
+        <div class="contact-row">
             <span class="h5"><em>Or you can send me a message below!</em></span>
-        </div> -->
+        </div>
 
 
 
 
 
-    <!-- <form role="form" action="<?php echo $_SERVER['REQUEST_URI']; ?>" method="POST" enctype="multipart/form-data">
+<form role="form" action="http://forms.brace.io/james@jamesdmosier.com">
 
         <div class="form-row">
             <label for="name">name:
@@ -95,4 +99,4 @@ if (isset($_POST['email'])) {
         <div class="form-row text-center">
             <button type="submit" class="button-hollow">send</button>
         </div>
-    </form> -->
+</form>

@@ -1,0 +1,80 @@
+---
+layout: default
+title: Contact
+permalink: /contact/
+---
+<div id="map"></div>
+
+<div class="form-wrapper">
+
+  <div class="form-underlay"></div>
+
+  <div class="contact-info">
+    <h3 class="hidden-phone">Hi! You can contact me a few different ways...</h3>
+
+    <div class="contact-row">
+      <span class="contact-mode">Email me</span><span class="contact-data"> ... <a href="mailto:james@jamesdmosier.com">james@jamesdmosier.com</a></span>
+    </div>
+
+    <div class="contact-row">
+      <span class="contact-mode">Find me being social somewhere</span> ...
+      <ul class="social-list">
+        <li><a href="https://github.com/jamez14" target="_blank" title="GitHub"><i class="fa github-icon"></i></a>
+        </li>
+        <li><a href="https://twitter.com/jamez14" target="_blank" title="Twitter"><i class="fa twitter-icon"></i></a>
+        </li>
+        <li><a href="https://instagram.com/jamez1414" target="_blank" title="Instagram"><i class="fa instagram-icon"></i></a>
+        </li>
+        <li><a href="http://lnkd.in/3meEdA" target="_blank" title="LinkedIn"><i class="fa linkedin-icon"></i></a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="contact-row">
+      <span class="h5"><em>Or you can send me a message below!</em></span>
+    </div>
+
+  </div>
+
+  <form role="form" action="http://forms.brace.io/james@jamesdmosier.com" method="POST">
+
+    <div class="form-row">
+      <label for="name">name:
+        <input type="text" name="fullname" class="contact-input" id="form_name">
+      </label>
+    </div>
+
+    <div class="form-row">
+      <label for="email">email:
+        <input type="email" name="email" class="contact-input" id="form_email">
+      </label>
+    </div>
+
+    <div class="form-row">
+      <label for="phone">phone:
+        <input type="tel" name="phone" class="contact-input" id="form_phone">
+      </label>
+    </div>
+
+    <div class="form-row">
+      <label for="message">message:
+        <textarea name="message" class="contact-input input-textarea" id="form_message"></textarea>
+      </label>
+    </div>
+
+    <input type="hidden" name="_next" value="http://jamesdmosier.com/contact/success.html" />
+
+    <div class="form-row text-center">
+      <button type="submit" class="button-hollow">send</button>
+    </div>
+  </form>
+
+
+</div>
+
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASm3CwaK9qtcZEWYa-iQwHaGi3gcosAJc&sensor=false"></script>
+
+<script type="text/javascript">
+  $().gMap();
+</script>
