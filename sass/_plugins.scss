@@ -65,12 +65,11 @@
 }
 
 .tags {
-  position: fixed;
-  left: 0;
-  bottom: 0;  
-  width: 162px;
-  z-index: 9999;
+  margin-top: 40px;
+  display: table;
+  width: 100%;
   ul {
+    display: inline-block;
     list-style: none;
     margin: 0;
     padding: 0;        
@@ -101,10 +100,16 @@
     -o-transition: background-color 300ms ease-out;
     transition: background-color 300ms ease-out;
     &:hover {
-      background: $dark-grey;
+      background: #222;
       text-decoration: none !important;
     }
   }
+}
+
+.tags-inner {
+  display: table-cell;
+  text-align: center;
+  width: 100%;
 }
 
 

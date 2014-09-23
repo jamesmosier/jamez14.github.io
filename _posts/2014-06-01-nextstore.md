@@ -21,4 +21,16 @@ tags:
 	<p>The project was primarily done using HTML5, CSS3, and Big Cartel for the store's inventory management.</p>
 	 <a href="http://ruleofnext.bigcartel.com/" target="_blank" class="view-project">View Project</a>
 
+
+<aside class="tags">
+	<div class="tags-inner">
+	  	<ul>
+			{% for tag in page.tags %}
+				<li><a href="/tag/{{tag}}" title="view all projects that pertain to {{tag}}">{{ tag }}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+</aside>
+
+
 </section>
