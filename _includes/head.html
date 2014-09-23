@@ -11,21 +11,21 @@
         function loadCSS(e,t,n){"use strict";var i=window.document.createElement("link");var o=t||window.document.getElementsByTagName("script")[0];i.rel="stylesheet";i.href=e;i.media="only x";o.parentNode.insertBefore(i,o);setTimeout(function(){i.media=n||"all"})}
         
         //loadCSS( "/css/app.css" );
-        loadCSS( "css/app.min.css" );
+        loadCSS( "/css/app.min.css" );
     </script>
 
     
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script>
     if (!window.jQuery) {
-        document.write('<script src="lib/jquery/dist/jquery.js"><\/script>');
+        document.write('<script src="/lib/jquery/dist/jquery.js"><\/script>');
     }
     </script>
 
     <!-- <script type="text/javascript" src="/lib/modernizr.js"></script>
     <script type="text/javascript" src="/js/app.js"></script> -->
 
-    <script type="text/javascript" src="js/app.min.js"></script>
+    <script type="text/javascript" src="/js/app.min.js"></script>
 
     {% assign current = page.url | downcase | split: '/' %}
     <style type="text/css" >
@@ -39,7 +39,7 @@
             {% elsif current[1] == 'tag' %}
                 background: #52c69c; 
             {% else %}
-                background: url(images/bg.jpg) no-repeat center center fixed; 
+                background: url(/images/bg.jpg) no-repeat center center fixed; 
                 -webkit-background-size: cover;
                 -moz-background-size: cover;
                 -o-background-size: cover;

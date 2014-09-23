@@ -11,10 +11,12 @@
     "grunt-autoprefixer": "~0.6.3",
     "grunt-browser-sync": "~0.4.4",
     "grunt-contrib-cssmin": "~0.9.0",
+    "grunt-contrib-imagemin": "~0.8.x",
     "grunt-contrib-uglify": "~0.4.0",
     "grunt-contrib-watch": "~0.5.3",
     "grunt-jekyll": "~0.4.1",
     "grunt-sass": "~0.9.0",
-    "grunt-uncss": "^0.3.6"
+    "grunt-uncss": "^0.3.6",
+    "imagemin-mozjpeg": "^2.0.0"
   }
 }
