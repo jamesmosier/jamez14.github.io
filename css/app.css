@@ -1364,7 +1364,8 @@ textarea.contact-input {
   .form-wrapper form {
     margin-top: 0; }
   .intro {
-    width: 285px; } }
+    width: 285px;
+    margin-left: -80px; } }
 
 @media screen and (max-width: 480px) {
   #header {
@@ -1380,10 +1381,6 @@ textarea.contact-input {
     height: auto;
     padding: 15px;
     overflow: scroll; }
-  .form-wrapper {
-    padding: 15px;
-    padding-top: 5px;
-    width: 100%; }
   .contact-info h3 {
     font-size: 18px; }
   .social-list {
@@ -1411,8 +1408,16 @@ textarea.contact-input {
     left: 5px;
     color: #52c69c; } }
 
+@media all and (max-width: 767px) and (min-width: 321px) {
+  .some-words {
+    width: 80%; } }
+
 @media screen and (max-width: 768px) {
   .col-3 {
-    width: 50%; } }
+    width: 50%; }
+  .form-wrapper {
+    padding: 15px;
+    padding-top: 5px;
+    width: 100%; } }
 
 @media screen and (max-width: 1024px) { }

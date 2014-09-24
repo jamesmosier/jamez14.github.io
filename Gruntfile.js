@@ -1,4 +1,3 @@
-var mozjpeg = require('imagemin-mozjpeg');
 
 module.exports = function(grunt) {
 
@@ -32,10 +31,11 @@ module.exports = function(grunt) {
         tasks: ['uglify']
       }
     },
-
+    // http://192.168.1.143:3001/
+    // '_site/css/*.css'
     browser_sync: {
       files: {
-        src: ['_site/css/*.css']
+        src: ['sass/*.scss']
       },
       options: {
         watchTask: true,

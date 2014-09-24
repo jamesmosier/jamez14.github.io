@@ -11,6 +11,7 @@
 
 	.intro {
 		width: 285px;
+		margin-left: -80px;
 	}
 }
  
@@ -35,12 +36,6 @@
 		height: auto;
 		padding: 15px;
 		overflow: scroll;
- 	}
-
- 	.form-wrapper {
- 		padding: 15px;
- 		padding-top: 5px;
- 		width: 100%;
  	}
 
  	.contact-info h3 {
@@ -88,6 +83,14 @@
 	}
 
 }
+
+@media all and (max-width: 767px) and (min-width: 321px) {
+
+	.some-words {
+ 		width: 80%;
+ 	}
+
+}
  
 @media screen and (max-width: 768px) { // iPad portrait
 
@@ -95,6 +98,14 @@
 		width: 50%;
 	}
 
+
+ 	.form-wrapper {
+ 		padding: 15px;
+ 		padding-top: 5px;
+ 		width: 100%;
+ 	}
+
+ 	
 
 }
  
