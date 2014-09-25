@@ -10,5 +10,5 @@ markdown: kramdown
 permalink: pretty
 
 #Exclude
-exclude: ['node_modules', 'sass', 'README.md', 'bower.json', 'package.json']
+exclude: ['node_modules', 'sass', 'README.md', 'bower.json', 'package.json', 'Gruntfile.js']
 
