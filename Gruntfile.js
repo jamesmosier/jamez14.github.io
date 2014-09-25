@@ -114,6 +114,6 @@ module.exports = function(grunt) {
 
   grunt.registerTask('prod', ['sass', 'jekyll', 'cssmin', 'uglify', 'buildcontrol']);
 
-  grunt.registerTask('clean', ['clean']);
+
 
 };
