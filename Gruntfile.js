@@ -18,9 +18,15 @@ module.exports = function(grunt) {
     },
 
     watch: {
+      options: {
+        livereload: true
+      },
       sass: {
         files: 'sass/**/*.scss',
-        tasks: ['sass', 'cssmin']
+        tasks: ['sass', 'cssmin'],
+        options: {
+          livereload: true
+        }
       },
       jekyll: {
         files: ['_layouts/*.html', '_includes/*.html', 'js/*.js', '_plugins/*', '_posts/*', 'css/app.css', 'about/*', 'contact/*', 'portfolio/*', 'index.html'],
@@ -35,7 +41,7 @@ module.exports = function(grunt) {
     // '_site/css/*.css'
     browser_sync: {
       files: {
-        src: ['sass/*.scss']
+        src: ['_site/css/*.css']
       },
       options: {
         watchTask: true,
@@ -54,7 +60,7 @@ module.exports = function(grunt) {
     cssmin: {
       combine: {
         files: {
-          '_site/css/app.min.css': ['_site/css/app.css']
+          'css/app.min.css': ['css/app.css']
         }
       }
     },
@@ -81,7 +87,11 @@ module.exports = function(grunt) {
           branch: 'master'
         }
       }
-    }
+    },
+
+    clean: [ 
+      '_site'
+    ],
 
 
   });
@@ -94,12 +104,16 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-build-control');
+  grunt.loadNpmTasks('grunt-contrib-clean');
 
 
   // Custom tasks
-  grunt.registerTask('build', ['sass', 'jekyll']);
-  grunt.registerTask('postbuild', ['cssmin', 'uglify']);
+  grunt.registerTask('build', ['sass', 'cssmin', 'jekyll']);
+  grunt.registerTask('postbuild', ['uglify']);
   grunt.registerTask('default', ['build', 'postbuild', 'browser_sync', 'watch']);
 
   grunt.registerTask('prod', ['sass', 'jekyll', 'cssmin', 'uglify', 'buildcontrol']);
+
+  grunt.registerTask('clean', ['clean']);
+
 };
