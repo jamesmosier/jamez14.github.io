@@ -66,15 +66,22 @@ module.exports = function(grunt) {
           '_site/js/lib.min.js': ['_site/lib/jquery.typer.js', '_site/lib/jquery.hoverdir.js', '_site/lib/headroom/headroom.min.js']
         }
       }
-    }
+    },
 
-    // uncss: {
-    //   dist: {
-    //     files: {
-    //       '_site/css/tidy.css': ['_site/index.html', '_site/about/index.html', '_site/contact/index.html', '_site/contact/success.html', , '_site/contact/index.html', '_site/portfolio/index.html', , '_site/portfolio/2014/05/31/**/index.html', '_site/tag/**/index.html']
-    //     }
-    //   }
-    // }
+    buildcontrol: {
+      options: {
+        dir: '_site',
+        commit: true,
+        push: true,
+        message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+      },
+      pages: {
+        options: {
+          remote: 'git@github.com:jamesdmosier/jamesdmosier.github.io.git',
+          branch: 'master'
+        }
+      }
+    }
 
 
   });
@@ -86,7 +93,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-browser-sync');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  // grunt.loadNpmTasks('grunt-uncss');
+  grunt.loadNpmTasks('grunt-build-control');
 
 
   // Custom tasks
@@ -94,5 +101,5 @@ module.exports = function(grunt) {
   grunt.registerTask('postbuild', ['cssmin', 'uglify']);
   grunt.registerTask('default', ['build', 'postbuild', 'browser_sync', 'watch']);
 
-  grunt.registerTask('prod', ['sass', 'jekyll', 'cssmin', 'uglify'])
+  grunt.registerTask('prod', ['sass', 'jekyll', 'cssmin', 'uglify', 'buildcontrol']);
 };
