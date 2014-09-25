@@ -916,12 +916,14 @@ textarea.input-elem-lg {
 .header-title > h1 > a {
   color: #949494;
   font-size: 20px;
+  letter-spacing: -1.5px;
   webkit-transition: color 0.5s, font-size 0.5s;
   -moz-transition: color 0.5s, font-size 0.5s;
   -o-transition: color 0.5s, font-size 0.5s;
   transition: color 0.5s, font-size 0.5s; }
 
 .site-nav {
+  margin-top: 120px;
   text-align: center; }
   .site-nav ul {
     list-style-type: none;
