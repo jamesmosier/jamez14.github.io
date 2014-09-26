@@ -1392,8 +1392,7 @@ textarea.contact-input {
   .post-thumb-title {
     font-size: 16px; }
   #map {
-    padding-bottom: 9999px;
-    margin-bottom: -9999px; }
+    height: 100vh; }
   .form-underlay {
     height: 100%;
     height: 100vh;

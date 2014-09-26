@@ -77,4 +77,9 @@ permalink: /contact/
 
 <script type="text/javascript">
   $().gMap();
+
+  $(window).on("load resize",function(e){
+    var windowHeight = $(document).height();
+    $("#map").height(windowHeight);
+  });
 </script>
