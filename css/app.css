@@ -1068,17 +1068,20 @@ textarea.input-elem-lg {
 
 /*  INDEX  */
 .home-wrapper {
-  margin-left: 170px;
-  position: relative; }
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 100%; }
 
 .intro {
   width: 345px;
-  height: 110px;
+  height: 165px;
+  margin: auto;
   position: absolute;
-  left: 50%;
-  top: 50%;
-  margin-top: -50px;
-  margin-left: -100px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
   text-align: center; }
 
 /* PORTFOLIO */
@@ -1366,8 +1369,7 @@ textarea.contact-input {
   .form-wrapper form {
     margin-top: 0; }
   .intro {
-    width: 285px;
-    margin-left: -80px; } }
+    width: 285px; } }
 
 @media screen and (max-width: 480px) {
   #header {
@@ -1393,8 +1395,8 @@ textarea.contact-input {
     padding-bottom: 9999px;
     margin-bottom: -9999px; }
   .form-underlay {
-    padding-bottom: 9999px;
-    margin-bottom: -9999px;
+    height: 100%;
+    height: 100vh;
     overflow: hidden; }
   aside.tags {
     display: none;

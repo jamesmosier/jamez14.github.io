@@ -68,8 +68,8 @@ module.exports = function(grunt) {
     uglify: {
       my_target: {
         files: {
-          '_site/js/app.min.js': ['_site/lib/modernizr.js', '_site/js/app.js'],
-          '_site/js/lib.min.js': ['_site/lib/jquery.typer.js', '_site/lib/jquery.hoverdir.js', '_site/lib/headroom/headroom.min.js']
+          'js/app.min.js': ['lib/modernizr.js', 'js/app.js'],
+          'js/lib.min.js': ['lib/jquery.typer.js', 'lib/jquery.hoverdir.js', 'lib/headroom/headroom.min.js']
         }
       }
     },
@@ -108,9 +108,9 @@ module.exports = function(grunt) {
 
 
   // Custom tasks
-  grunt.registerTask('build', ['sass', 'cssmin', 'jekyll']);
-  grunt.registerTask('postbuild', ['uglify']);
-  grunt.registerTask('default', ['build', 'postbuild', 'browser_sync', 'watch']);
+  grunt.registerTask('build', ['sass', 'cssmin', 'uglify', 'jekyll']);
+  //grunt.registerTask('postbuild', []);
+  grunt.registerTask('default', ['build', 'browser_sync', 'watch']);
 
   grunt.registerTask('prod', ['sass', 'jekyll', 'cssmin', 'uglify', 'buildcontrol']);
 

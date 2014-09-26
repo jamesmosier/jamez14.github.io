@@ -2,39 +2,17 @@
 layout: default
 ---
 <article class="home-wrapper">
-  <div class="single">
+  
     <section class="intro">
       <h1>Hi, I'm James Mosier</h1>
       <h4>I'm a <span data-typer-targets="front-end developer &middot; ux designer,mobile developer &middot; ui designer,c# programmer &middot; .net coder,ui designer &middot; ux designer,lover of the web &middot; photography enthusiast, mobile developer &middot; Xamarin novice"></span>.</h4>
     </section>
-  </div>
+  
 </article>
 
 
 <script type="text/javascript">
-$(window).load(function() {
-  $('.intro').css({
-      position:'absolute',
-      left: ($(".home-wrapper").width() - $('.intro').outerWidth()) / 2,
-      top: ($(window).height() - $('.intro').outerHeight()) / 2
+  $(function () {
+    $("[data-typer-targets]").typer({});
   });
-});
-
-
-$(window).resize(function(){
-
-    $('.intro').css({
-        position:'absolute',
-        left: ($(".home-wrapper").width() - $('.intro').outerWidth()) / 2,
-        top: ($(window).height() - $('.intro').outerHeight()) / 2
-    });
-
-});
-
-$(window).resize();
-
-
-$(function () {
-  $("[data-typer-targets]").typer({});
-});
 </script>
