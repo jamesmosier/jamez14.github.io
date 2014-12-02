@@ -2,7 +2,7 @@
 title: James D. Mosier
 email: james@jamesdmosier.com
 description: "James Mosier is a web developer + software engineer from Akron Ohio. He specializes in C#, ASP.NET, JavaScript, CSS, jQuery, Xamarin, AngularJS, and open source projects (on Github!)."
-baseurl: "http://jamesdmosier.com"
+baseurl: "http://192.168.104.1:3001"
 url: "http://jamesdmosier.com"
 
 # Build settings
@@ -12,3 +12,5 @@ permalink: pretty
 #Exclude
 exclude: ['CNAME', 'node_modules', '.bowerrc', '.gitignore', 'sass', 'bower.json', 'package.json', 'Gruntfile.js', 'lib/jquery/src', '.sass-cache']
 
+gems:
+  - jekyll-redirect-from
