@@ -16,5 +16,5 @@ gems:
   - jekyll-redirect-from
 
 #Exclude
-exclude: ['CNAME', 'node_modules', '.bowerrc', '.gitignore', 'sass', 'bower.json', 'package.json', 'Gruntfile.js', 'lib/jquery/src', '.sass-cache']
+exclude: ['node_modules', '.bowerrc', '.gitignore', 'sass', 'bower.json', 'package.json', 'Gruntfile.js', 'lib/jquery/src', '.sass-cache']
 
