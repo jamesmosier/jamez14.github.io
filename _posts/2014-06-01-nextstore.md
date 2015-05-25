@@ -1,12 +1,14 @@
 ---
 layout: post
-permalink: rule-of-next-store
+permalink: /portfolio/rule-of-next-store
 title:  NEXT (online store)
 featured-image: /images/post-thumbs/nextstore.png
 date:   2014-06-01 00:00:05
 categories: portfolio
-tags: 
-- html5 
+redirect_from:
+  - /portfolio/2014/05/31/nextstore/
+tags:
+- html5
 - css3
 - jquery
 - ecommerce
