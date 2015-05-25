@@ -4,137 +4,148 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
 <url>
   <loc>http://jamesdmosier.com/</loc>
-  <lastmod>2014-09-23T13:52:53+00:00</lastmod>
+  <lastmod>2015-05-25T19:31:00+00:00</lastmod>
 </url>
 <url>
   <loc>http://jamesdmosier.com/portfolio/</loc>
-  <lastmod>2014-09-23T13:52:58+00:00</lastmod>
+  <lastmod>2015-05-25T19:31:00+00:00</lastmod>
 </url>
 <url>
   <loc>http://jamesdmosier.com/about/</loc>
-  <lastmod>2014-09-23T13:52:44+00:00</lastmod>
+  <lastmod>2015-05-25T19:31:00+00:00</lastmod>
 </url>
 <url>
   <loc>http://jamesdmosier.com/contact/</loc>
-  <lastmod>2014-09-23T16:11:32+00:00</lastmod>
+  <lastmod>2015-05-25T19:31:00+00:00</lastmod>
 </url>
 <url>
-  <loc>http://jamesdmosier.com/portfolio/2014/05/31/trailfinder/</loc>
-  <lastmod>2014-09-23T13:52:58+00:00</lastmod>
+  <loc>http://jamesdmosier.com/portfolio/trailfinder/</loc>
+  <lastmod>2015-05-25T19:31:00+00:00</lastmod>
 </url>
 <url>
-  <loc>http://jamesdmosier.com/portfolio/2014/05/31/cps/</loc>
-  <lastmod>2014-09-23T13:52:57+00:00</lastmod>
+  <loc>http://jamesdmosier.com/portfolio/creative-painting-stenciling/</loc>
+  <lastmod>2015-05-25T19:31:00+00:00</lastmod>
 </url>
 <url>
-  <loc>http://jamesdmosier.com/portfolio/2014/05/31/mmh/</loc>
-  <lastmod>2014-09-23T13:52:57+00:00</lastmod>
+  <loc>http://jamesdmosier.com/portfolio/mr-michael-hurley/</loc>
+  <lastmod>2015-05-25T19:31:00+00:00</lastmod>
 </url>
 <url>
-  <loc>http://jamesdmosier.com/portfolio/2014/05/31/next/</loc>
-  <lastmod>2014-09-23T13:52:57+00:00</lastmod>
+  <loc>http://jamesdmosier.com/portfolio/james-on-github/</loc>
+  <lastmod>2015-05-25T19:31:00+00:00</lastmod>
 </url>
 <url>
-  <loc>http://jamesdmosier.com/portfolio/2014/05/31/jsless/</loc>
-  <lastmod>2014-09-23T13:52:57+00:00</lastmod>
+  <loc>http://jamesdmosier.com/portfolio/jsless/</loc>
+  <lastmod>2015-05-25T19:31:00+00:00</lastmod>
 </url>
 <url>
-  <loc>http://jamesdmosier.com/portfolio/2014/05/31/cureo/</loc>
-  <lastmod>2014-09-23T13:52:57+00:00</lastmod>
+  <loc>http://jamesdmosier.com/portfolio/cureo/</loc>
+  <lastmod>2015-05-25T19:31:00+00:00</lastmod>
 </url>
 <url>
-  <loc>http://jamesdmosier.com/portfolio/2014/05/31/cpl/</loc>
-  <lastmod>2014-09-23T13:52:57+00:00</lastmod>
+  <loc>http://jamesdmosier.com/portfolio/cpl-annual-report/</loc>
+  <lastmod>2015-05-25T19:31:00+00:00</lastmod>
 </url>
 <url>
-  <loc>http://jamesdmosier.com/portfolio/2014/05/31/absolut/</loc>
-  <lastmod>2014-09-23T13:52:57+00:00</lastmod>
+  <loc>http://jamesdmosier.com/portfolio/rule-of-next/</loc>
+  <lastmod>2015-05-25T19:31:00+00:00</lastmod>
 </url>
 <url>
-  <loc>http://jamesdmosier.com/portfolio/2014/05/31/nextstore/</loc>
-  <lastmod>2014-09-23T13:52:58+00:00</lastmod>
+  <loc>http://jamesdmosier.com/portfolio/rule-of-next-store/</loc>
+  <lastmod>2015-05-25T19:31:00+00:00</lastmod>
 </url>
 <url>
   <loc>http://jamesdmosier.com/tag/html5/</loc>
-  <lastmod>2014-09-23T13:52:59+00:00</lastmod>
+  <lastmod>2015-05-25T19:31:00+00:00</lastmod>
 </url>
 <url>
   <loc>http://jamesdmosier.com/tag/css3/</loc>
-  <lastmod>2014-09-23T13:52:59+00:00</lastmod>
+  <lastmod>2015-05-25T19:31:00+00:00</lastmod>
 </url>
 <url>
   <loc>http://jamesdmosier.com/tag/angularjs/</loc>
-  <lastmod>2014-09-23T13:52:58+00:00</lastmod>
+  <lastmod>2015-05-25T19:31:00+00:00</lastmod>
 </url>
 <url>
   <loc>http://jamesdmosier.com/tag/phonegap/</loc>
-  <lastmod>2014-09-23T13:53:00+00:00</lastmod>
+  <lastmod>2015-05-25T19:31:00+00:00</lastmod>
 </url>
 <url>
   <loc>http://jamesdmosier.com/tag/googleApi/</loc>
-  <lastmod>2014-09-23T13:52:59+00:00</lastmod>
+  <lastmod>2015-05-25T19:31:00+00:00</lastmod>
 </url>
 <url>
   <loc>http://jamesdmosier.com/tag/mobile/</loc>
-  <lastmod>2014-09-23T13:53:00+00:00</lastmod>
+  <lastmod>2015-05-25T19:31:00+00:00</lastmod>
 </url>
 <url>
   <loc>http://jamesdmosier.com/tag/jquery/</loc>
-  <lastmod>2014-09-23T13:53:00+00:00</lastmod>
+  <lastmod>2015-05-25T19:31:00+00:00</lastmod>
 </url>
 <url>
   <loc>http://jamesdmosier.com/tag/bootstrap3/</loc>
-  <lastmod>2014-09-23T13:52:59+00:00</lastmod>
+  <lastmod>2015-05-25T19:31:00+00:00</lastmod>
 </url>
 <url>
   <loc>http://jamesdmosier.com/tag/php/</loc>
-  <lastmod>2014-09-23T13:53:00+00:00</lastmod>
+  <lastmod>2015-05-25T19:31:00+00:00</lastmod>
 </url>
 <url>
   <loc>http://jamesdmosier.com/tag/wordpress/</loc>
-  <lastmod>2014-09-23T13:53:00+00:00</lastmod>
+  <lastmod>2015-05-25T19:31:00+00:00</lastmod>
 </url>
 <url>
   <loc>http://jamesdmosier.com/tag/svg/</loc>
-  <lastmod>2014-09-23T13:53:00+00:00</lastmod>
-</url>
-<url>
-  <loc>http://jamesdmosier.com/tag/javascript/</loc>
-  <lastmod>2014-09-23T13:52:59+00:00</lastmod>
-</url>
-<url>
-  <loc>http://jamesdmosier.com/tag/github/</loc>
-  <lastmod>2014-09-23T13:52:59+00:00</lastmod>
-</url>
-<url>
-  <loc>http://jamesdmosier.com/tag/framework/</loc>
-  <lastmod>2014-09-23T13:52:59+00:00</lastmod>
-</url>
-<url>
-  <loc>http://jamesdmosier.com/tag/library/</loc>
-  <lastmod>2014-09-23T13:53:00+00:00</lastmod>
-</url>
-<url>
-  <loc>http://jamesdmosier.com/tag/asp.net/</loc>
-  <lastmod>2014-09-23T13:52:58+00:00</lastmod>
-</url>
-<url>
-  <loc>http://jamesdmosier.com/tag/singlePageApp/</loc>
-  <lastmod>2014-09-23T13:53:00+00:00</lastmod>
-</url>
-<url>
-  <loc>http://jamesdmosier.com/tag/animation/</loc>
-  <lastmod>2014-09-23T13:52:58+00:00</lastmod>
+  <lastmod>2015-05-25T19:31:00+00:00</lastmod>
 </url>
 <url>
   <loc>http://jamesdmosier.com/tag/bootstrap/</loc>
-  <lastmod>2014-09-23T13:52:59+00:00</lastmod>
+  <lastmod>2015-05-25T19:31:00+00:00</lastmod>
+</url>
+<url>
+  <loc>http://jamesdmosier.com/tag/angular/</loc>
+  <lastmod>2015-05-25T19:31:00+00:00</lastmod>
+</url>
+<url>
+  <loc>http://jamesdmosier.com/tag/node/</loc>
+  <lastmod>2015-05-25T19:31:00+00:00</lastmod>
+</url>
+<url>
+  <loc>http://jamesdmosier.com/tag/knockout/</loc>
+  <lastmod>2015-05-25T19:31:00+00:00</lastmod>
+</url>
+<url>
+  <loc>http://jamesdmosier.com/tag/javascript/</loc>
+  <lastmod>2015-05-25T19:31:00+00:00</lastmod>
+</url>
+<url>
+  <loc>http://jamesdmosier.com/tag/github/</loc>
+  <lastmod>2015-05-25T19:31:00+00:00</lastmod>
+</url>
+<url>
+  <loc>http://jamesdmosier.com/tag/framework/</loc>
+  <lastmod>2015-05-25T19:31:00+00:00</lastmod>
+</url>
+<url>
+  <loc>http://jamesdmosier.com/tag/library/</loc>
+  <lastmod>2015-05-25T19:31:00+00:00</lastmod>
+</url>
+<url>
+  <loc>http://jamesdmosier.com/tag/asp.net/</loc>
+  <lastmod>2015-05-25T19:31:00+00:00</lastmod>
+</url>
+<url>
+  <loc>http://jamesdmosier.com/tag/singlePageApp/</loc>
+  <lastmod>2015-05-25T19:31:00+00:00</lastmod>
+</url>
+<url>
+  <loc>http://jamesdmosier.com/tag/animation/</loc>
+  <lastmod>2015-05-25T19:31:00+00:00</lastmod>
 </url>
 <url>
   <loc>http://jamesdmosier.com/tag/ecommerce/</loc>
-  <lastmod>2014-09-23T13:52:59+00:00</lastmod>
+  <lastmod>2015-05-25T19:31:00+00:00</lastmod>
 </url>
 </urlset>
