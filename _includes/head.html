@@ -4,7 +4,7 @@
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{{ site.description }}">
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html',''}}">
 
     <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="/css/app.min.css">
@@ -32,7 +32,7 @@
             {% elsif current[1] == 'tag' %}
                 background: #52c69c;
             {% else %}
-                background: url(/images/bg.jpg) no-repeat center center fixed;
+                background: url(/images/self.jpg) no-repeat center center fixed;
                 -webkit-background-size: cover;
                 -moz-background-size: cover;
                 -o-background-size: cover;

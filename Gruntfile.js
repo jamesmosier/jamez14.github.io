@@ -89,7 +89,7 @@ module.exports = function(grunt) {
       }
     },
 
-    clean: [ 
+    clean: [
       '_site'
     ],
 
@@ -97,7 +97,7 @@ module.exports = function(grunt) {
   });
 
   // Load the plugins
-  grunt.loadNpmTasks('grunt-sass');
+  grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-jekyll');
   grunt.loadNpmTasks('grunt-browser-sync');
