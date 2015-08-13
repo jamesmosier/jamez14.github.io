@@ -29,7 +29,7 @@ module.exports = function(grunt) {
         }
       },
       jekyll: {
-        files: ['_layouts/*.html', '_includes/*.html', 'js/*.js', '_plugins/*', '_posts/*', 'css/app.css', 'about/*', 'contact/*', 'portfolio/*', 'index.html'],
+        files: ['_layouts/*.html', '_includes/*.html', 'js/*.js', '_plugins/*', '_posts/*', 'css/app.css', 'about/*', 'contact/*', 'portfolio/*', 'blog/**/*', 'index.html'],
         tasks: ['jekyll']
       },
       scripts: {

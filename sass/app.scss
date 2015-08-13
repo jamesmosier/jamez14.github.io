@@ -9,7 +9,7 @@ $darker-grey: #222;
 @import 'framework';
 @import 'mixins';
 @import 'plugins';
-
+@import 'pages/syntax';
 
 
 .page-content {
@@ -223,32 +223,6 @@ $darker-grey: #222;
 
 .fa-chevron-left:before {
   content: "\f053";
-}
-
-/*  INDEX  */
-
-.home-wrapper {
-  position: relative;
-  float: left;
-  width: 100%;
-  height: 100%;
-}
-
-.intro {
-  width: 345px;
-  height: 165px;
-  margin: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  text-align: center;
-}
-
-.hello-typer,
-.hello {
-  color: #fafafa;
 }
 
 /* PORTFOLIO */
@@ -638,5 +612,5 @@ $darker-grey: #222;
 
 
 
-
+@import 'pages/index';
 @import 'responsive';
