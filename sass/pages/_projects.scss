@@ -4,26 +4,37 @@ body {
 }
 
 .projects-page {
-  display: flex;
-  flex-direction: column;
   height: 100%;
-  max-height: 0;
 }
 
 .columns-wrap {
-  flex: 1;
-  display: flex;
+  height: 100%;
 }
 
 .column-third {
-  flex: 0 0 33.3333%;
+  display: table;
+  max-height: 0;
+  height: 100%;
+  float: left;
+  position: relative;
+  overflow: hidden;
+  width: 33.33333%;
   -webkit-transition: max-height 1s;
   -moz-transition: max-height 1s;
   transition: max-height 1s;
 
   h3 {
-    color: #fff;
+    display: table-cell;
     text-align: center;
+    vertical-align: middle;
+  }
+}
+
+.column-third h3 a {
+  color: #fff;
+
+  &:hover {
+    color: #ccc;
   }
 }
 
@@ -47,7 +58,11 @@ body {
   background-color: #333; //#DF5A49
   color: #fff;
   padding: 20px;
+  position: absolute;
+  z-index: 1;
   text-align: center;
+  width: 100%;
+
   h2 {
     margin: 0;
   }

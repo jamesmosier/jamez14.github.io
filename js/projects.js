@@ -6,7 +6,7 @@
   };
 
   projects.prototype.setup = function () {
-    var cols = document.querySelectorAll('.projects-page');
+    var cols = document.querySelectorAll('.column-third');
 
     for (var i = cols.length - 1; i >= 0; i--) {
       cols[i].classList.add('column-loaded');
