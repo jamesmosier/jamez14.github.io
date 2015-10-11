@@ -60,6 +60,7 @@ html {
 
 body {
   /*Inder OR Imprima is also a good one*/
+  background-color: #F7F7F7;
   font-family: "Quicksand", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-size: 100%;
   height: 100%;
@@ -405,6 +406,11 @@ textarea.input-elem-lg {
   width: 33.33%;
 }
 
+.highlight {
+  background-color: #fff;
+  padding: 5px;
+  box-shadow: 1px 1px 10px #EFEFEF;
+}
 
 
 

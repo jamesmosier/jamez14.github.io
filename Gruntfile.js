@@ -18,18 +18,12 @@ module.exports = function(grunt) {
     },
 
     watch: {
-      options: {
-        livereload: true
-      },
       sass: {
         files: 'sass/**/*.scss',
-        tasks: ['sass', 'cssmin'],
-        options: {
-          livereload: true
-        }
+        tasks: ['sass', 'cssmin']
       },
       jekyll: {
-        files: ['_layouts/*.html', '_includes/*.html', 'js/*.js', '_plugins/*', '_posts/*', 'css/app.css', 'about/*', 'contact/*', 'portfolio/*', 'blog/**/*', 'index.html'],
+        files: ['_layouts/*.html', '_includes/*.html', '_plugins/*', '_posts/*', 'about/*', 'contact/*', 'portfolio/*', 'projects/*', 'blog/**/*', 'index.html', 'css/app.css'],
         tasks: ['jekyll']
       },
       scripts: {
@@ -39,20 +33,16 @@ module.exports = function(grunt) {
     },
     // http://192.168.1.143:3001/
     // '_site/css/*.css'
+
     browser_sync: {
-      files: {
-        src: ['_site/css/*.css']
-      },
-      options: {
-        watchTask: true,
-        ghostMode: {
-          clicks: true,
-          scroll: true,
-          links: true,
-          forms: true
-        },
-        server: {
-          baseDir: '_site'
+      dev: {
+        options: {
+          host: '192.168.1.143',
+          files: ['_site/css/*.css'],
+          watchTask: true,
+          server: {
+            baseDir: '_site'
+          }
         }
       }
     },
@@ -66,9 +56,9 @@ module.exports = function(grunt) {
     },
 
     uglify: {
-      my_target: {
+      the_targets: {
         files: {
-          'js/app.min.js': ['lib/modernizr.js', 'js/app.js'],
+          'js/app.min.js': ['lib/modernizr.js', 'js/projects.js', 'js/gMap.js'],
           'js/lib.min.js': ['lib/jquery.typer.js', 'lib/jquery.hoverdir.js', 'lib/headroom/headroom.min.js']
         }
       }
