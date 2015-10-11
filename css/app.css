@@ -1428,21 +1428,22 @@ textarea.input-elem-lg {
   .back-btn:before {
     content: "\f053"; }
 
-html, body {
+html,
+body {
   height: 100%; }
 
 .projects-page {
   display: flex;
-  flex-flow: column;
+  flex-direction: column;
   height: 100%;
   max-height: 0; }
 
+.columns-wrap {
+  flex: 1;
+  display: flex; }
+
 .column-third {
-  flex: 1 1 auto;
-  float: left;
-  position: relative;
-  overflow: hidden;
-  width: 33.33333%;
+  flex: 0 0 33.3333%;
   -webkit-transition: max-height 1s;
   -moz-transition: max-height 1s;
   transition: max-height 1s; }
@@ -1451,7 +1452,7 @@ html, body {
     text-align: center; }
 
 .column-loaded {
-  max-height: 100vh; }
+  max-height: 100%; }
 
 .proj-col-1 {
   background-color: #334D5C; }
