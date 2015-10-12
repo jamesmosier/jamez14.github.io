@@ -5,6 +5,7 @@ body {
 
 .projects-page {
   height: 100%;
+  position: relative;
 }
 
 .columns-wrap {
@@ -19,15 +20,24 @@ body {
   position: relative;
   overflow: hidden;
   width: 33.33333%;
-  -webkit-transition: max-height 1s;
-  -moz-transition: max-height 1s;
-  transition: max-height 1s;
+  -webkit-transition: max-height 1s, width .6s;
+  -moz-transition: max-height 1s, width .6s;
+  transition: max-height 1s, width .6s;
 
   h3 {
     display: table-cell;
     text-align: center;
     vertical-align: middle;
   }
+}
+
+.column-third.expanded-col {
+  width: 100%;
+}
+
+.column-third.contracted-col {
+  display: none;
+  width: 0;
 }
 
 .column-third h3 a {
@@ -67,3 +77,4 @@ body {
     margin: 0;
   }
 }
+

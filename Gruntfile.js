@@ -27,8 +27,8 @@ module.exports = function(grunt) {
         tasks: ['jekyll']
       },
       scripts: {
-        files: ['js/*.js'],
-        tasks: ['uglify']
+        files: ['js/gMap.js', 'js/projects.js'],
+        tasks: ['uglify', 'jekyll']
       }
     },
     // http://192.168.1.143:3001/
@@ -37,7 +37,7 @@ module.exports = function(grunt) {
     browser_sync: {
       dev: {
         options: {
-          host: '192.168.1.143',
+          host: 'http://localhost',
           files: ['_site/css/*.css'],
           watchTask: true,
           server: {
@@ -56,6 +56,11 @@ module.exports = function(grunt) {
     },
 
     uglify: {
+      options: {
+          mangle: false,
+          compress: false,
+          beautify: true
+        },
       the_targets: {
         files: {
           'js/app.min.js': ['lib/modernizr.js', 'js/projects.js', 'js/gMap.js'],
