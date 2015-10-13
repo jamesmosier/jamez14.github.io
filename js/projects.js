@@ -63,11 +63,13 @@
 
     // var transitionEvent = whichTransitionEvent();
     // transitionEvent && primaryCol.addEventListener(transitionEvent, function() {});
-    // for (var i = secondaryCols.length - 1; i >= 0; i--) {
-    //   var col = secondaryCols[i];
-    //   col.classList.add(this.contractedCol);
-    // }
 
+    var projectsTitle = document.getElementById('projects-title');
+    projectsTitle.textContent = e.target.text;
+    e.target.classList.add('fade-header');
+
+    var colContent = primaryCol.querySelectorAll('.column-content');
+    colContent[0].classList.add('active');
   };
 
   projects.prototype.columnWillContract = function(primaryCol, secondaryCols) {
