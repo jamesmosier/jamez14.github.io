@@ -3,6 +3,19 @@ body {
   height: 100%;
 }
 
+.projects-header {
+  background-color: #333; //#DF5A49
+  color: #fff;
+  padding: 20px;
+  position: absolute;
+  z-index: 9;
+  text-align: center;
+  width: 100%;
+  h2 {
+    margin: 0;
+  }
+}
+
 .projects-page {
   height: 100%;
   position: relative;
@@ -19,10 +32,11 @@ body {
   float: left;
   position: relative;
   overflow: hidden;
-  width: 33.33333%;
-  -webkit-transition: max-height 1s, width .6s;
-  -moz-transition: max-height 1s, width .6s;
-  transition: max-height 1s, width .6s;
+  // width: 33.33333%;
+  width: 33.555%;
+  // -webkit-transition: max-height 1s, width .6s linear;
+  // -moz-transition: max-height 1s, width .6s linear;
+  transition: max-height 1s, width .6s linear, height .6s linear, top .6s linear, left .6s linear, margin .6s linear;
 
   h3 {
     display: table-cell;
@@ -32,6 +46,8 @@ body {
 }
 
 .column-third.expanded-col {
+  top: 0;
+  left: 0;
   width: 100%;
 }
 
@@ -42,7 +58,6 @@ body {
 
 .column-third h3 a {
   color: #fff;
-
   &:hover {
     color: #ccc;
   }
@@ -54,27 +69,22 @@ body {
 
 .proj-col-1 {
   background-color: #334D5C;
+
+  position: absolute;
+  z-index: 1;
 }
 
 .proj-col-2 {
   background-color: #45B29D;
+
+  position: absolute;
+  left: 33.2%;
 }
 
 .proj-col-3 {
   background-color: #EFC94C;
-}
 
-.projects-header {
-  background-color: #333; //#DF5A49
-  color: #fff;
-  padding: 20px;
   position: absolute;
-  z-index: 1;
-  text-align: center;
-  width: 100%;
-
-  h2 {
-    margin: 0;
-  }
+  left: 66.5%;
 }
 

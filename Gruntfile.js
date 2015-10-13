@@ -37,7 +37,9 @@ module.exports = function(grunt) {
     browser_sync: {
       dev: {
         options: {
-          host: 'http://localhost',
+          ghostMode: false,
+          host: 'localhost',
+          port: 3000,
           files: ['_site/css/*.css'],
           watchTask: true,
           server: {

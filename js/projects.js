@@ -30,44 +30,75 @@
     whereImGoing.addEventListener('click', this.whereImGoing.bind(this), true);
   };
 
-  projects.prototype.whereIveBeen = function() {
+  projects.prototype.whereIveBeen = function(e) {
     if (this.col1.classList.contains(this.expandedCol)) {
-      this.col1.classList.remove(this.expandedCol);
-      this.col2.classList.remove(this.contractedCol);
-      this.col3.classList.remove(this.contractedCol);
+      this.columnWillContract(this.col1, [this.col2, this.col3]);
     } else {
-      this.col2.classList.add(this.contractedCol);
-      this.col3.classList.add(this.contractedCol);
-
-      this.col1.classList.add(this.expandedCol);
+      this.columnWillExpand(e, this.col1, [this.col2, this.col3]);
     }
   };
 
-  projects.prototype.whereIAm = function() {
+  projects.prototype.whereIAm = function(e) {
     if (this.col2.classList.contains(this.expandedCol)) {
-      this.col2.classList.remove(this.expandedCol);
-      this.col1.classList.remove(this.contractedCol);
-      this.col3.classList.remove(this.contractedCol);
+      this.columnWillContract(this.col2, [this.col1, this.col3]);
     } else {
-      this.col1.classList.add(this.contractedCol);
-      this.col3.classList.add(this.contractedCol);
-
-      this.col2.classList.add(this.expandedCol);
+      this.columnWillExpand(e, this.col2, [this.col1, this.col3]);
     }
   };
 
-  projects.prototype.whereImGoing = function() {
+  projects.prototype.whereImGoing = function(e) {
     if (this.col3.classList.contains(this.expandedCol)) {
-      this.col3.classList.remove(this.expandedCol);
-      this.col1.classList.remove(this.contractedCol);
-      this.col2.classList.remove(this.contractedCol);
+      this.columnWillContract(this.col3, [this.col1, this.col2]);
     } else {
-      this.col1.classList.add(this.contractedCol);
-      this.col2.classList.add(this.contractedCol);
-
-      this.col3.classList.add(this.expandedCol);
+      this.columnWillExpand(e, this.col3, [this.col1, this.col2]);
     }
   };
+
+  projects.prototype.columnWillExpand = function(e, primaryCol, secondaryCols) {
+    // user clicks a column so it will expand & others will contract
+    primaryCol.classList.add(this.expandedCol);
+
+    secondaryCols[0].classList.add(this.contractedCol);
+    secondaryCols[1].classList.add(this.contractedCol);
+
+    // var transitionEvent = whichTransitionEvent();
+    // transitionEvent && primaryCol.addEventListener(transitionEvent, function() {});
+    // for (var i = secondaryCols.length - 1; i >= 0; i--) {
+    //   var col = secondaryCols[i];
+    //   col.classList.add(this.contractedCol);
+    // }
+
+  };
+
+  projects.prototype.columnWillContract = function(primaryCol, secondaryCols) {
+    // user wants to contract a column, so remove appropriate classes
+    primaryCol.classList.remove(this.expandedCol);
+
+    // for (var i = secondaryCols.length - 1; i >= 0; i--) {
+    //   var col = secondaryCols[i];
+    //   col.classList.remove(this.contractedCol);
+    // }
+    secondaryCols[0].classList.remove(this.contractedCol);
+    secondaryCols[1].classList.remove(this.contractedCol);
+
+  };
+
+  function whichTransitionEvent() {
+    var t;
+    var el = document.createElement('fakeelement');
+    var transitions = {
+      'transition': 'transitionend',
+      'OTransition': 'oTransitionEnd',
+      'MozTransition': 'transitionend',
+      'WebkitTransition': 'webkitTransitionEnd'
+    }
+
+    for (t in transitions) {
+      if (el.style[t] !== undefined) {
+        return transitions[t];
+      }
+    }
+  }
 
   window.projects = projects;
 
