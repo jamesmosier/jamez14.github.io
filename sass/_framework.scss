@@ -416,8 +416,9 @@ textarea.input-elem-lg {
 
 .highlight {
   background-color: #fff;
-  padding: 5px;
   box-shadow: 1px 1px 10px #EFEFEF;
+  padding: 5px;
+  overflow-x: scroll;
 }
 
 ol, ul {

@@ -19,11 +19,13 @@ The setup for this feature can be broken up into 3 parts:
 
 Normally the usage of a feature would be explained at the end (after the directive & template explaination), but in this case it is helpful to see *how* the directive is used before explaining it.
 
-You need at the very least 3 directive properties:
+You need at least 3 directive properties:
 
-    * `inline-edit` - the text to display initially to the user. It is the value you'd normally write like this `{{person.Name}}`
-    * `on-save` - the function in your controller that will save the newly inserted value
-    * `on-cancel` - the value to revert to when the user clicks *cancel*
+- `inline-edit` - the text to display initially to the user & the model value. It is an object. It is the value you'd normally write like this {% raw %}`{{person.Name}}`{% endraw %}
+- `on-save` - the function in your controller that will save the newly inserted value
+- `on-cancel` - the value to revert to when the user clicks *cancel*
+
+And the usage in markup looks like this...
 
 `<div inline-edit="person.Name" on-save="vm.updatePerson(person)" on-cancel="cancelEdit(person.Name)"></div>`
 
@@ -82,7 +84,7 @@ function inlineEditDirective($timeout, config) {
                 }
             };
 
-            scope.save = function (param) {                
+            scope.save = function (param) {
                 scope.handleSave({ value: scope.model });
                 scope.editMode = false;
             };
@@ -137,7 +139,7 @@ function inlineEditDirective($timeout, config) {
         </form>
     </div>
     <div class="editable-item-name" ng-mouseenter="showEdit = true" ng-mouseleave="showEdit = false">
-        <div class="inline-edit-mode" ng-hide="editMode" ng-click="edit()">{{model}}</div>
+        <div class="inline-edit-mode" ng-hide="editMode" ng-click="edit()">{% raw %}{{model}}{% endraw %}</div>
 
         <a class="pull-left inline-edit-link" ng-click="edit()" ng-hide="editMode">
             <i class="fa fa-edit"></i>

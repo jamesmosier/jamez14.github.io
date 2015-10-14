@@ -2,17 +2,27 @@
 layout: default
 ---
 
-<!-- <div class="blog-header"></div> -->
-
+<div class="blog-index-header">
+  <nav class="blog-nav">
+    <ul class="list-unstyled">
+      {% for post in site.posts %}
+        {% if post.categories contains 'blog' %}
+          <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </nav>
+</div>
 
 <main class="home-wrapper">
 
+{% comment %}
   <!-- <section class="intro" itemscope itemtype="http://data-vocabulary.org/Person">
       <h1 class="hello">Hi, I'm <span itemprop="name">James Mosier</span></h1>
       <div style="display:none;visibility:hidden;"><span itemprop="title">Software Developer</span><img src="/images/jamesmosier.png" itemprop="photo"><span itemprop="address" itemscope itemtype="http://data-vocabulary.org/Address"><span itemprop="locality">Akron</span>,<span itemprop="region">OH</span></span></div>
       <h4 class="hello-typer">I'm a <span data-typer-targets="front-end developer &middot; ux thinker,javascript lover &middot; ui designer,c# programmer &middot; .net coder,JS enthusiast &middot; ux evangelist,lover of the web &middot; photography amateur, mobile developer &middot; Xamarin dev"></span>.</h4>
     </section> -->
-
+{% endcomment %}
 
   {% for post in site.posts %}
     {% if post.categories contains 'blog' %}
@@ -32,8 +42,10 @@ layout: default
 </main>
 
 
+{% comment %}
 <script type="text/javascript">
   // $(function() {
   //   //$("[data-typer-targets]").typer({});
   // });
 </script>
+{% endcomment %}

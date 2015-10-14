@@ -2,7 +2,7 @@
 layout: post
 category: blog
 title: 'ASP.NET MVC AngularJS Routing & Setup'
-date: 2015-08-12 19:00
+date: 2015-09-20 19:00
 ---
 
 Setup of an AngularJS application, in particular routing, is typically painless and super easy to get started. There are [so](https://github.com/angular/angular-seed) [many](https://github.com/jakemmarsh/angularjs-gulp-browserify-boilerplate) [great](https://github.com/ngbp/ngbp) [boilerplates](https://github.com/linnovate/mean) that show you the way, you may be wondering how this post will be different. Well if you spend anytime in the .NET world and work on the front end and haven't ever found yourself Googling, "asp.net mvc angularjs routing" consider yourself lucky. The big issue that I encountered when trying to setup a solution in Visual Studio using .NET MVC and Angular was that MVC has routing baked in, something that Angular also does *really* well. Naturally they are both competing for your affection. I found a bunch of great articles that helped me piece together a solution that worked best for our project.
@@ -23,7 +23,7 @@ A good first step in spinning up the solution is dealing with the ASP.NET MVC (M
     <title ng-bind="title + ' | Admin App'"></title>
     <base href="/AdminApp/" />
 </head>
-<body ng-cloak ng-controller="RootController">  
+<body ng-cloak ng-controller="RootController">
     <div ng-view></div>
 
     @Scripts.Render("~/bundles/app")
@@ -62,7 +62,7 @@ public class RouteConfig
 
 ### New "Views" folder
 
-MVC treats the `Views` folder with special consideration, therefore I decided it was best to create a new folder called `Templates`. You can of course call this whatever you'd like, the only purpose it has is to house our HTML files. That's right, no more `.cshtml` files - only HTML from here on out! Our only `.cshtml` file will be the `Home/Index.cshtml` file that was previously discussed.
+MVC treats the `Views` folder with special consideration; therefore I decided it was best to create a new folder called `Templates`. You can of course call this whatever you'd like, the only purpose it has is to house our HTML files. That's right, no more `.cshtml` files - only HTML from here on out! Our only `.cshtml` file will be the `Home/Index.cshtml` file that was previously discussed.
 
 ## AngularJS Pieces
 
