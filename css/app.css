@@ -690,6 +690,12 @@ textarea.input-elem-lg {
 .col-3 {
   width: 33.33%; }
 
+.col-4 {
+  width: 25%; }
+
+.col-6 {
+  width: 50%; }
+
 .highlight {
   background-color: #fff;
   padding: 5px;
@@ -1363,6 +1369,7 @@ ol, ul {
 .posts-thumbs {
   float: left;
   list-style-type: none;
+  margin-bottom: 0;
   padding: 0;
   position: relative; }
   .posts-thumbs li {
@@ -1435,6 +1442,26 @@ ol, ul {
   vertical-align: middle; }
   .back-btn:before {
     content: "\f053"; }
+
+.port-section-title {
+  color: #fff;
+  padding: 10px; }
+
+.portfolio-section {
+  color: #fff; }
+
+.port-paragraph {
+  padding: 0 10px; }
+
+.whatimdoing {
+  float: left;
+  padding-top: 10px;
+  border-top: 1px solid #949494;
+  margin-top: 15px;
+  width: 100%; }
+  .whatimdoing .port-section-title {
+    margin-top: 0;
+    margin-bottom: 0; }
 
 html,
 body {
