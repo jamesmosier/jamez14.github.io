@@ -170,12 +170,6 @@ hr {
   height: 0; }
 
 /**
- * Contain overflow in all browsers.
- */
-pre {
-  overflow: auto; }
-
-/**
  * Address odd `em`-unit font size rendering in all browsers.
  */
 code,
@@ -697,8 +691,7 @@ textarea.input-elem-lg {
   width: 50%; }
 
 .highlight {
-  background-color: #fff;
-  box-shadow: 1px 1px 10px #EFEFEF;
+  background-color: #F0F0F0;
   padding: 5px;
   overflow-x: scroll; }
 
@@ -1787,7 +1780,7 @@ textarea.contact-input {
       color: #3dffb9; }
 
 .blog-index-header {
-  background-color: #777;
+  background-color: #ccc;
   min-height: 40px; }
 
 .blog-nav {
@@ -1800,11 +1793,24 @@ textarea.contact-input {
       color: #ccc; }
 
 .blog-post {
-  border-bottom: 2px solid #DDD;
-  padding-top: 25px;
-  padding-bottom: 25px; }
+  background-color: #fff;
+  box-shadow: 1px 1px 10px #ddd;
+  padding: 25px;
+  margin-bottom: 25px; }
   .blog-post code, .blog-post kbd, .blog-post pre, .blog-post samp {
     overflow: visible; }
+
+.blog-post-page {
+  margin-bottom: 20px;
+  padding: 0 20px; }
+
+.blog-post-page .post-content a {
+  color: #52c69c; }
+  .blog-post-page .post-content a:hover {
+    color: #3dffb9; }
+
+.blog-post-page .post-content p {
+  padding: 0; }
 
 .blog-title {
   font-size: 36px;
@@ -1818,6 +1824,7 @@ textarea.contact-input {
 
 .blog-meta {
   font-size: 14px;
+  font-weight: bold;
   text-align: center; }
 
 .blog-entry p,
@@ -1843,6 +1850,11 @@ textarea.contact-input {
 .hello-typer,
 .hello {
   color: #fafafa; }
+
+.all-posts .bars-icon {
+  float: right;
+  margin-right: 15px;
+  margin-top: 3px; }
 
 @media screen and (max-width: 320px) {
   .hidden-phone {

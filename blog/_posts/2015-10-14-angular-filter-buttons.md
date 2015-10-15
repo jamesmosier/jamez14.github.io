@@ -48,7 +48,7 @@ The second part of the markup contains the `ng-repeat` with the filter attribute
 {% highlight html %}
 <ul>
   <li ng-repeat="product in vm.products | filter: vm.filterProducts">
-    {{product.name}} in
+    {% raw %}{{product.name}}{% endraw %} in
     <span ng-style="{color: product.specs.color}">{% raw %}{{product.specs.color}}{% endraw %}</span>
   </li>
 </ul>

@@ -30,7 +30,7 @@
 }
 
 .blog-index-header {
-  background-color: #777;
+  background-color: #ccc;
   min-height: 40px;
 }
 
@@ -55,13 +55,32 @@
 }
 
 .blog-post {
-  border-bottom: 2px solid #DDD;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  // border-bottom: 2px solid #DDD;
+  background-color: #fff;
+  box-shadow: 1px 1px 10px #ddd;
+  padding: 25px;
+  margin-bottom: 25px;
 
   code, kbd, pre, samp {
     overflow: visible;
   }
+}
+
+.blog-post-page {
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+
+.blog-post-page .post-content a {
+  color: $primary-color;
+
+  &:hover {
+    color: $primary-bright;
+  }
+}
+
+.blog-post-page .post-content p {
+  padding: 0;
 }
 
 .blog-title {
@@ -80,6 +99,7 @@
 
 .blog-meta {
   font-size: 14px;
+  font-weight: bold;
   text-align: center;
 }
 
@@ -108,4 +128,10 @@
 .hello-typer,
 .hello {
   color: #fafafa;
+}
+
+.all-posts .bars-icon {
+  float: right;
+  margin-right: 15px;
+  margin-top: 3px;
 }

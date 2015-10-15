@@ -9,12 +9,12 @@ Setup of an AngularJS application, in particular routing, is typically painless 
 
 ## Our Solution's Needs
 
-The main reason we chose to keep the ASP.NET MVC architecture around was to have a familiar server side language at our disposal. The application we were building is used to manage users and settings for the numerous scanning devices our clients use to scan in patrons at an event. Therefore we needed authentication with AES-256 encryption and we didn't want our key and vector strings hanging out in some JavaScript source file. So alas, we decided to use the server side features of ASP.NET MVC to take care of the initial login as well as changing passwords for users once they were authenticated.
+The main reason we chose to keep the ASP.NET MVC architecture around was to have a familiar server side language at our disposal. The application we were building is used to manage users and settings for the numerous scanning devices our clients use to scan patron's tickets at an event. Therefore we needed authentication with AES-256 encryption and we didn't want our key and vector strings hanging out in some JavaScript source file. So alas, we decided to use the server side features of ASP.NET MVC to take care of the initial login as well as changing passwords for users once they were authenticated.
 
 ## ASP.NET MVC Pieces
 
 ### Index.cshtml
-A good first step in spinning up the solution is dealing with the ASP.NET MVC (MVC from here on out) features. Typically all of your MVC views would be `.cshtml` files and for good reason. Although with AngularJS, we don't have much need for the great features you get by using a server side compiled file. The two big points that come to mind is Razor's data binding syntax and connecting to MVC controllers. The only `.cshtml` file I kept around was `Home/Index.cshtml` file which I used as the layout for the application. You can delete all other folders and files in the Views folder. A brief version of this file looks like this:
+A good first step in spinning up the solution is dealing with the ASP.NET MVC (MVC from here on out) features. Typically all of your MVC views would be `.cshtml` files and for good reason. Although with AngularJS, we don't have much need for the great features you get by using a server rendered file. The two big points that come to mind is Razor's data binding syntax and connecting to MVC controllers. The only `.cshtml` file I kept around was `Home/Index.cshtml` file which I used as the layout for the application. You can delete all other folders and files in the Views folder. A brief version of this file looks like this:
 
 {% highlight html %}
 <!DOCTYPE html>
@@ -36,7 +36,7 @@ Pretty standard stuff in the code above. The only thing to keep a mental note of
 **Note:** Pay attention to ensure the `_ViewStart.cshtml` file doesn't pop back up in the Views folder as we go along, when creating new controllers Visual Studio seems to regenerate this file.
 
 ### RouteConfig.cs
-One of the most important files and bits of code that might not be the prettiest is the `RouteConfig.cs` which would typically handle our MVC routing without us making any changes to it. In this case, we create a new `MapRoute` called *API* which we can use to make `$http` requests in our AngularJS app to our MVC controller and return a `JsonResult`. The second `MapRoute` is an edited version of the default, with the major change being the URL which I changed to `"{*url}"` which will capture all requests (not prefixed with `/api`) and will hit our Home/Index controller action and kick off our application by returning the `Home/Index.cshtml` view which is our layout.
+One of the most important files and bits of code that might not be the prettiest is the `RouteConfig.cs` which would typically handle our MVC routing without making any changes to it. In this case, we create a new `MapRoute` called *API* which we can use to make `$http` requests in our AngularJS app to our MVC controller and return a `JsonResult`. The second `MapRoute` is an edited version of the default, with the major change being the URL which I changed to `"{*url}"` which will capture all requests (not prefixed with `/api`) and will hit our Home/Index controller action and kick start our application by returning the `Home/Index.cshtml` view which is our layout.
 
 {% highlight csharp %}
 public class RouteConfig
@@ -83,7 +83,7 @@ Scripts/
      └── config.route.js
 {% endhighlight %}
 
-Now that we have our server side routing in place, we now need to setup our Angular routing. We will follow a typical "stock" Angular methodology for this, partially adopted . You can use whatever router you please, such as [ui-router](https://github.com/angular-ui/ui-router) or any other (I think at least).
+Now that we have our server side routing in place, we now need to setup our Angular routing. We will follow a typical "stock" Angular methodology for this, although you can use whatever router you please, such as [ui-router](https://github.com/angular-ui/ui-router).
 
 ### config.route.js
 
@@ -132,3 +132,9 @@ Now that we have our server side routing in place, we now need to setup our Angu
 })();
 
 {% endhighlight %}
+
+You've likely seen a version of this routing before when working with Angular, so I won't waste time explaining it in detail. Just notice how all of our templates point to files in the `/Template` folder, because MVC let's Angular handle all the routing.
+
+## Conclusion
+
+That wraps it up! You'll now have a fully functional AngularJS application, powered by ASP.NET MVC on the serverside! The only thing that MVC does for us, when it comes to routing, is point the server to the `Index.cshtml` page that then renders some markup and our Angular files. Then Angular will handle our routing from there on our.

@@ -1,9 +1,14 @@
 ---
 layout: default
 ---
-
-<div class="blog-index-header">
-  <nav class="blog-nav">
+{% comment %}
+<div class="blog-index-header" style="display: none;">
+  <div class="all-posts">
+    <a href="javascript:void(0)">
+      <span class="fa bars-icon"></span>
+    </a>
+  </div>
+  <nav class="blog-nav" style="display:none;">
     <ul class="list-unstyled">
       {% for post in site.posts %}
         {% if post.categories contains 'blog' %}
@@ -13,7 +18,7 @@ layout: default
     </ul>
   </nav>
 </div>
-
+{% endcomment %}
 <main class="home-wrapper">
 
 {% comment %}
