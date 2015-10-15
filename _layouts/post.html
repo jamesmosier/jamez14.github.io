@@ -1,12 +1,17 @@
 ---
 layout: default
 ---
+{% assign current = page.url | downcase | split: '/' %}
+{% if current[1] == 'blog' %}
+<div class="post blog-post-page">
+    <h1 class="post-title">{{ page.title }}</h1>
+    {% else %}
+    <div class="post">
+    {% endif %}
+    <article class="post-content">
+  	 {{ content }}
 
-<div class="post">
-  <article class="post-content">
-  	{{ content }}
+  	 <a href="/portfolio/" class="go-back"><span class="fa fa-chevron-left"></span> go back</a>
 
-  	<a href="/portfolio/" class="go-back"><span class="fa fa-chevron-left"></span> go back</a>
-
-  </article>
+    </article>
 </div>

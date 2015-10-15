@@ -24,7 +24,7 @@
     <style type="text/css" >
         html {
             {% if current[1] == 'portfolio' %}
-                background: none;
+                background: #565656;
             {% elsif current[1] == 'about' %}
                 background: #fff;
             {% elsif current[1] == 'contact' %}
@@ -32,11 +32,11 @@
             {% elsif current[1] == 'tag' %}
                 background: #52c69c;
             {% else %}
-                background: url(/images/selfie.jpg) no-repeat center center fixed;
+                /*background: url(/images/selfie.jpg) no-repeat center center fixed;
                 -webkit-background-size: cover;
                 -moz-background-size: cover;
                 -o-background-size: cover;
-                background-size: cover;
+                background-size: cover;*/
             {% endif %}
         }
 
@@ -45,6 +45,10 @@
             overflow: hidden;
         }
         *{ margin: 0; padding: 0;}
+        {% elsif current[1] == 'portfolio' %}
+        body {
+            background-color: #565656;
+        }
         {% endif %}
     </style>
 <meta name="google-site-verification" content="nonfyyLTZ2-ismFnCJag3Qas6qzABexScFCFtAYCbqM" />

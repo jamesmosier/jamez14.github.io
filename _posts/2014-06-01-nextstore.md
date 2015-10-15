@@ -7,6 +7,7 @@ date:   2014-06-01 00:00:05
 categories: portfolio
 redirect_from:
   - /portfolio/2014/05/31/nextstore/
+published: false
 tags:
 - html5
 - css3
