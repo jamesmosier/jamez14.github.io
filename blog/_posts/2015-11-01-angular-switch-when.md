@@ -3,6 +3,7 @@ layout: post
 category: blog
 title: 'Angular "ng-switch-when"'
 date: 2015-11-01 20:10
+tag: angular-switch-when
 ---
 
 During the creation of a new feature, I came across an interesting built in AngularJS directive I had never seen before, `ng-switch-when`. Its functionality is pretty straightforward and the name really says it all.

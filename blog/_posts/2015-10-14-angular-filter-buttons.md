@@ -3,6 +3,7 @@ layout: post
 category: blog
 title: 'AngularJS Filter Buttons for nested object properties'
 date: 2015-10-14 09:00
+tag: angular-filterbtn
 ---
 
 Filtering in Angular is really, really simple. The docs provide a [good overview of how to filter](https://docs.angularjs.org/api/ng/filter/filter) a list on the fly via the `filter` attribute of `ng-repeat`. What the docs leave out (at least I haven't found it anywhere) is how to filter a list on click of a button and to take it a step further: how to filter by a nested object property.

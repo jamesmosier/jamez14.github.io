@@ -27,7 +27,7 @@ module.exports = function(grunt) {
         tasks: ['jekyll']
       },
       scripts: {
-        files: ['js/gMap.js', 'js/projects.js'],
+        files: ['js/gMap.js', 'js/projects.js', 'js/homepage.js'],
         tasks: ['uglify', 'jekyll']
       }
     },
@@ -65,8 +65,8 @@ module.exports = function(grunt) {
         },
       the_targets: {
         files: {
-          'js/app.min.js': ['lib/modernizr.js', 'js/projects.js', 'js/gMap.js'],
-          'js/lib.min.js': ['lib/jquery.typer.js', 'lib/jquery.hoverdir.js', 'lib/headroom/headroom.min.js']
+          'js/app.min.js': ['lib/modernizr.js', 'js/projects.js', 'js/gMap.js', 'js/homepage.js'],
+          'js/lib.min.js': ['lib/jquery.color-2.1.2.min.js', 'lib/jquery.hoverdir.js', 'lib/headroom/headroom.min.js']
         }
       }
     },

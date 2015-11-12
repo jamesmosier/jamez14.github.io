@@ -3,6 +3,7 @@ layout: post
 category: blog
 title: 'ASP.NET MVC AngularJS Routing & Setup'
 date: 2015-09-20 19:00
+tag: aspnet-angular
 ---
 
 Setup of an AngularJS application, in particular routing, is typically painless and super easy to get started. There are [so](https://github.com/angular/angular-seed) [many](https://github.com/jakemmarsh/angularjs-gulp-browserify-boilerplate) [great](https://github.com/ngbp/ngbp) [boilerplates](https://github.com/linnovate/mean). You may be wondering how this post will be different. If you spend any time in the .NET front end world and haven't ever found yourself Googling, "asp.net mvc angularjs routing" consider yourself lucky. The big issue that I encountered when trying to setup a solution in Visual Studio using .NET MVC and Angular was that MVC has routing baked in, something that Angular also does *really* well. Naturally they are both competing for your affection. I found a bunch of great articles that helped me piece together a solution that worked best for my project.

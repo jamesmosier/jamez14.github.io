@@ -3,6 +3,7 @@ layout: post
 category: blog
 title: 'AngularJS Inline Edit Directive'
 date: 2015-09-12 09:00
+tag: angular-inline-edit
 ---
 
 I came across a great *"inline edit"* directive a while back for use with AngularJS. I found this originally on [Plunker](http://embed.plnkr.co/VLKzcd/app.js) and made it my own. The general idea is that when you click on some text (or an edit button next to the text), an input is displayed along with save/cancel buttons. This enables the user to change the text to another value quickly and easily, in place.

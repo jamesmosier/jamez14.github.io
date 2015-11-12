@@ -3,6 +3,7 @@ layout: post
 category: blog
 title: 'Some quick Angular filters'
 date: 2015-09-15 12:15
+tag: angular-filter
 ---
 
 While working on a medium sized AngularJS application, I've relied upon a few custom filters to fit my needs. They aren't mind blowing, but nonetheless, still useful.

@@ -1,37 +1,27 @@
 ---
 layout: default
 ---
-{% comment %}
-<div class="blog-index-header" style="display: none;">
-  <div class="all-posts">
-    <a href="javascript:void(0)">
-      <span class="fa bars-icon"></span>
-    </a>
+
+<div class="posts-nav">
+  <div class="posts-nav-icon">
+    <a href="javascript:void(0)" id="toggle-posts-nav"><span class="fa bars-icon"></span></a>
   </div>
-  <nav class="blog-nav" style="display:none;">
+  <nav class="blog-nav" style="display: none;">
     <ul class="list-unstyled">
       {% for post in site.posts %}
         {% if post.categories contains 'blog' %}
-          <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+          <li><a href="#{{ post.tag }}" class="blog-nav-anchor">{{ post.title }}</a></li>
         {% endif %}
       {% endfor %}
     </ul>
   </nav>
 </div>
-{% endcomment %}
-<main class="home-wrapper">
 
-{% comment %}
-  <!-- <section class="intro" itemscope itemtype="http://data-vocabulary.org/Person">
-      <h1 class="hello">Hi, I'm <span itemprop="name">James Mosier</span></h1>
-      <div style="display:none;visibility:hidden;"><span itemprop="title">Software Developer</span><img src="/images/jamesmosier.png" itemprop="photo"><span itemprop="address" itemscope itemtype="http://data-vocabulary.org/Address"><span itemprop="locality">Akron</span>,<span itemprop="region">OH</span></span></div>
-      <h4 class="hello-typer">I'm a <span data-typer-targets="front-end developer &middot; ux thinker,javascript lover &middot; ui designer,c# programmer &middot; .net coder,JS enthusiast &middot; ux evangelist,lover of the web &middot; photography amateur, mobile developer &middot; Xamarin dev"></span>.</h4>
-    </section> -->
-{% endcomment %}
+<main class="home-wrapper">
 
   {% for post in site.posts %}
     {% if post.categories contains 'blog' %}
-      <div class="blog-post">
+      <div class="blog-post" id="{{ post.tag }}">
         <h2 class="blog-title">
           <a href="{{ post.url }}">{{ post.title }}</a>
         </h2>
@@ -42,7 +32,6 @@ layout: default
       </div>
     {% endif %}
   {% endfor %}
-
 
 </main>
 
