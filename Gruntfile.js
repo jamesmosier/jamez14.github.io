@@ -1,5 +1,8 @@
+'use strict';
 
 module.exports = function(grunt) {
+
+  require('load-grunt-tasks')(grunt);
 
   grunt.initConfig({
 
@@ -90,26 +93,28 @@ module.exports = function(grunt) {
       '_site'
     ],
 
+    copy: {
+      main: {
+        files: [
+          {
+            expand: true,
+            flatten: true,
+            src: ['icons/*'],
+            dest: '_site/',
+            filter: 'isFile'
+          }
+        ]
+      }
+    }
 
   });
 
-  // Load the plugins
-  grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-jekyll');
-  grunt.loadNpmTasks('grunt-browser-sync');
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-build-control');
-  grunt.loadNpmTasks('grunt-contrib-clean');
-
-
   // Custom tasks
-  grunt.registerTask('build', ['sass', 'cssmin', 'uglify', 'jekyll']);
+  grunt.registerTask('build', ['sass', 'cssmin', 'uglify', 'jekyll', 'copy']);
   //grunt.registerTask('postbuild', []);
   grunt.registerTask('default', ['build', 'browser_sync', 'watch']);
 
-  grunt.registerTask('prod', ['sass', 'jekyll', 'cssmin', 'uglify', 'buildcontrol']);
+  grunt.registerTask('prod', ['sass', 'jekyll', 'cssmin', 'uglify', 'copy', 'buildcontrol']);
 
   grunt.registerTask('publish', ['buildcontrol']);
 
