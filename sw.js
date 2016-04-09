@@ -5,7 +5,7 @@ var urlsToCache = [
   '/js/app.min.js',
   '/js/lib.min.js',
   '/css/app.min.css',
-  'http://fonts.googleapis.com/css?family=Quicksand:300,400,700',
+  'https://fonts.googleapis.com/css?family=Quicksand:300,400,700',
   'https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'
 ];
 
