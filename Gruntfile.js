@@ -27,11 +27,15 @@ module.exports = function(grunt) {
       },
       jekyll: {
         files: ['_layouts/*.html', '_includes/**/*.html', '_plugins/*', '_posts/*', 'about/*', 'contact/*', 'portfolio/*', 'projects/*', 'blog/**/*', 'index.html', 'css/app.css'],
-        tasks: ['jekyll']
+        tasks: ['jekyll', 'copy']
       },
       scripts: {
         files: ['js/gMap.js', 'js/projects.js', 'js/homepage.js'],
-        tasks: ['uglify', 'jekyll']
+        tasks: ['uglify', 'jekyll', 'copy']
+      },
+      scriptsDev: {
+        files: ['sw.js'],
+        tasks: ['jekyll', 'copy']
       }
     },
     // http://192.168.1.143:3001/
