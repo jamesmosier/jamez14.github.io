@@ -254,7 +254,7 @@ function checkForAnalyticsRequest(requestUrl) {
   // Construct a URL object (https://developer.mozilla.org/en-US/docs/Web/API/URL.URL)
   // to make it easier to check the various components without dealing with string parsing.
   var url = new URL(requestUrl);
-
+  console.log('IS IT A GA REQUEST?!?!??!');
   if ((url.hostname === 'www.google-analytics.com' ||
        url.hostname === 'ssl.google-analytics.com') &&
        url.pathname === '/collect') {
