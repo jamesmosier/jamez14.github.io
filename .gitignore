@@ -1,4 +1,6 @@
 _site
 lib/jquery/src
+lib/sw-toolbox/recipes
+lib/sw-toolbox/test
 node_modules
 .sass-cache

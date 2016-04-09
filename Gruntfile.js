@@ -1,5 +1,8 @@
+'use strict';
 
 module.exports = function(grunt) {
+
+  require('load-grunt-tasks')(grunt);
 
   grunt.initConfig({
 
@@ -24,11 +27,11 @@ module.exports = function(grunt) {
       },
       jekyll: {
         files: ['_layouts/*.html', '_includes/**/*.html', '_plugins/*', '_posts/*', 'about/*', 'contact/*', 'portfolio/*', 'projects/*', 'blog/**/*', 'index.html', 'css/app.css'],
-        tasks: ['jekyll']
+        tasks: ['jekyll', 'copy']
       },
       scripts: {
-        files: ['js/gMap.js', 'js/projects.js', 'js/homepage.js'],
-        tasks: ['uglify', 'jekyll']
+        files: ['js/gMap.js', 'js/projects.js', 'js/homepage.js', 'sw.js'],
+        tasks: ['uglify', 'jekyll', 'copy']
       }
     },
     // http://192.168.1.143:3001/
@@ -58,15 +61,26 @@ module.exports = function(grunt) {
     },
 
     uglify: {
-      options: {
+      scriptz: {
+        options: {
           mangle: false,
           compress: false,
           beautify: true
         },
-      the_targets: {
         files: {
           'js/app.min.js': ['lib/modernizr.js', 'js/projects.js', 'js/gMap.js', 'js/homepage.js'],
           'js/lib.min.js': ['lib/jquery.color-2.1.2.min.js', 'lib/jquery.hoverdir.js', 'lib/headroom/headroom.min.js']
+        }
+      },
+      serviceworker: {
+        options: {
+          mangle: false,
+          compress: {
+            drop_console: true
+          }
+        },
+        files: {
+          'sw.js': ['js/sw.js']
         }
       }
     },
@@ -90,26 +104,28 @@ module.exports = function(grunt) {
       '_site'
     ],
 
+    copy: {
+      main: {
+        files: [
+          {
+            expand: true,
+            flatten: true,
+            src: ['icons/*'],
+            dest: '_site/',
+            filter: 'isFile'
+          }
+        ]
+      }
+    }
 
   });
 
-  // Load the plugins
-  grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-jekyll');
-  grunt.loadNpmTasks('grunt-browser-sync');
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-build-control');
-  grunt.loadNpmTasks('grunt-contrib-clean');
-
-
   // Custom tasks
-  grunt.registerTask('build', ['sass', 'cssmin', 'uglify', 'jekyll']);
+  grunt.registerTask('build', ['sass', 'cssmin', 'uglify', 'jekyll', 'copy']);
   //grunt.registerTask('postbuild', []);
   grunt.registerTask('default', ['build', 'browser_sync', 'watch']);
 
-  grunt.registerTask('prod', ['sass', 'jekyll', 'cssmin', 'uglify', 'buildcontrol']);
+  grunt.registerTask('prod', ['sass', 'jekyll', 'cssmin', 'uglify', 'copy', 'buildcontrol']);
 
   grunt.registerTask('publish', ['buildcontrol']);
 
