@@ -1,7 +1,7 @@
 # Site settings
 title: James D. Mosier
 email: james@jamesdmosier.com
-description: "James Mosier is a web developer & software engineer from Akron Ohio. He specializes in front-end development (JavaScript!), C# (ASP.NET) along with HTML5, CSS3, Xamarin for mobile development, & a ton more."
+description: "James Mosier is a full stack web developer/software engineer from Akron Ohio. He specializes in JavaScript, NodeJS, C# (ASP.NET) along with HTML5, CSS3, Xamarin for mobile development, & a ton more."
 baseurl: "http://jamesdmosier.com"
 url: "http://jamesdmosier.com"
 # baseurl: "http://192.168.1.143:3001"
