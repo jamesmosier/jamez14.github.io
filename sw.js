@@ -6,7 +6,24 @@ var urlsToCache = [
   '/js/lib.min.js',
   '/css/app.min.css',
   'https://fonts.googleapis.com/css?family=Quicksand:300,400,700',
-  'https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'
+  'https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js',
+  '/favicon-16x16.png',
+  '/favicon-96x96.png',
+  '/favicon-32x32.png',
+  '/apple-icon-57x57.png',
+  '/apple-icon-60x60.png',
+  '/apple-icon-72x72.png',
+  '/apple-icon-76x76.png',
+  '/apple-icon-114x114.png',
+  '/apple-icon-120x120.png',
+  '/apple-icon-144x144.png',
+  '/apple-icon-152x152.png',
+  '/apple-icon-180x180.png',
+  '/android-icon-192x192.png',
+  '/favicon.ico',
+  '/manifest.json',
+  '/ms-icon-144x144.png',
+  'https://www.google-analytics.com/ga.js'
 ];
 
 self.addEventListener('install', function(event) {
