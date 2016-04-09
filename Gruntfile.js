@@ -30,12 +30,8 @@ module.exports = function(grunt) {
         tasks: ['jekyll', 'copy']
       },
       scripts: {
-        files: ['js/gMap.js', 'js/projects.js', 'js/homepage.js'],
+        files: ['js/gMap.js', 'js/projects.js', 'js/homepage.js', 'sw.js'],
         tasks: ['uglify', 'jekyll', 'copy']
-      },
-      scriptsDev: {
-        files: ['sw.js'],
-        tasks: ['jekyll', 'copy']
       }
     },
     // http://192.168.1.143:3001/
@@ -65,15 +61,26 @@ module.exports = function(grunt) {
     },
 
     uglify: {
-      options: {
+      scriptz: {
+        options: {
           mangle: false,
           compress: false,
           beautify: true
         },
-      the_targets: {
         files: {
           'js/app.min.js': ['lib/modernizr.js', 'js/projects.js', 'js/gMap.js', 'js/homepage.js'],
           'js/lib.min.js': ['lib/jquery.color-2.1.2.min.js', 'lib/jquery.hoverdir.js', 'lib/headroom/headroom.min.js']
+        }
+      },
+      serviceworker: {
+        options: {
+          mangle: false,
+          compress: {
+            drop_console: true
+          }
+        },
+        files: {
+          'sw.js': ['js/sw.js']
         }
       }
     },
