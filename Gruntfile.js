@@ -30,8 +30,8 @@ module.exports = function(grunt) {
         tasks: ['jekyll', 'copy']
       },
       scripts: {
-        files: ['js/gMap.js', 'js/projects.js', 'js/homepage.js', 'sw.js'],
-        tasks: ['uglify', 'jekyll', 'copy']
+        files: ['js/gMap.js', 'js/projects.js', 'js/homepage.js', 'js/sw.js'],
+        tasks: ['uglify:dev', 'jekyll', 'copy']
       }
     },
     // http://192.168.1.143:3001/
@@ -61,7 +61,19 @@ module.exports = function(grunt) {
     },
 
     uglify: {
-      scriptz: {
+      prod: {
+        options: {
+          compress: {
+            drop_console: true
+          }
+        },
+        files: {
+          'js/app.min.js': ['lib/modernizr.js', 'js/projects.js', 'js/gMap.js', 'js/homepage.js'],
+          'js/lib.min.js': ['lib/jquery.color-2.1.2.min.js', 'lib/jquery.hoverdir.js', 'lib/headroom/headroom.min.js'],
+          'sw.js': ['js/sw.js']
+        }
+      },
+      dev: {
         options: {
           mangle: false,
           compress: false,
@@ -69,17 +81,7 @@ module.exports = function(grunt) {
         },
         files: {
           'js/app.min.js': ['lib/modernizr.js', 'js/projects.js', 'js/gMap.js', 'js/homepage.js'],
-          'js/lib.min.js': ['lib/jquery.color-2.1.2.min.js', 'lib/jquery.hoverdir.js', 'lib/headroom/headroom.min.js']
-        }
-      },
-      serviceworker: {
-        options: {
-          mangle: false,
-          compress: {
-            drop_console: true
-          }
-        },
-        files: {
+          'js/lib.min.js': ['lib/jquery.color-2.1.2.min.js', 'lib/jquery.hoverdir.js', 'lib/headroom/headroom.min.js'],
           'sw.js': ['js/sw.js']
         }
       }
@@ -121,11 +123,11 @@ module.exports = function(grunt) {
   });
 
   // Custom tasks
-  grunt.registerTask('build', ['sass', 'cssmin', 'uglify', 'jekyll', 'copy']);
+  grunt.registerTask('build', ['sass', 'cssmin', 'uglify:dev', 'jekyll', 'copy']);
   //grunt.registerTask('postbuild', []);
   grunt.registerTask('default', ['build', 'browser_sync', 'watch']);
 
-  grunt.registerTask('prod', ['sass', 'jekyll', 'cssmin', 'uglify', 'copy', 'buildcontrol']);
+  grunt.registerTask('prod', ['sass', 'jekyll', 'cssmin', 'uglify:prod', 'copy', 'buildcontrol']);
 
   grunt.registerTask('publish', ['buildcontrol']);
 
