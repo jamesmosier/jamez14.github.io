@@ -1641,7 +1641,6 @@ body {
 .social-list {
   list-style: none;
   margin-top: 10px;
-  margin-left: 60px;
   padding-left: 0; }
   .social-list li {
     display: inline-block;
@@ -1786,6 +1785,9 @@ textarea.contact-input {
   margin-bottom: 25px; }
   .blog-post code, .blog-post kbd, .blog-post pre, .blog-post samp {
     overflow: visible; }
+  .blog-post li {
+    margin-bottom: 7px;
+    line-height: 1.2; }
 
 .blog-post-page {
   margin-bottom: 20px;
