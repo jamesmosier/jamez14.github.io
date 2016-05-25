@@ -1704,6 +1704,11 @@ textarea.contact-input {
       color: #3dffb9;
       text-decoration: none; }
 
+.map-bg-image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 0; }
+
 /* POSTs */
 .post-content p {
   line-height: 1.5;
