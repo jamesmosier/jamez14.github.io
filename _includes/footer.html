@@ -19,3 +19,19 @@
     ga('create', 'UA-39374841-1', 'auto');
     ga('send', 'pageview');
 </script>
+
+<script type="text/javascript">
+  'use strict';
+  try {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then(function(registrations) {
+        for (let registration of registrations) {
+          registration.unregister();
+        }
+      });
+    }
+  } catch (e) {
+    console.log('unregister exception');
+    console.log(e);
+  }
+</script>
