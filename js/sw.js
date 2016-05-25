@@ -113,7 +113,9 @@ var urlsToCache = [
     '/android-icon-192x192.png',
     '/favicon.ico',
     '/manifest.json',
-    '/ms-icon-144x144.png'
+    '/ms-icon-144x144.png',
+    '/images/akron-map.png',
+    '/images/JamesMosier-Resume.pdf'
 ];
 
 self.addEventListener('install', function(event) {
