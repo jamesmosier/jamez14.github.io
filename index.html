@@ -35,7 +35,7 @@ layout: default
 
 </main>
 
-
+{%comment%}
 <script type="text/javascript" id="sw">
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('./sw.js').then(function(registration) {
@@ -45,3 +45,4 @@ layout: default
     });
   }
 </script>
+{%endcomment%}

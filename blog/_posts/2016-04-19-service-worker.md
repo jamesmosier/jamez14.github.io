@@ -27,3 +27,7 @@ Other than that, the setup and execution of the service worker code was fairly s
 
 
 Here are some other resources for learning more about service workers. [Jake Archibald](https://jakearchibald.com/2014/using-serviceworker-today/) [has a ton](https://jakearchibald.com/2014/service-worker-first-draft/) [of articles](https://jakearchibald.com/2014/offline-cookbook/) as well as [Google’s engineering team](https://developers.google.com/web/showcase/case-study/service-workers-iowa?hl=en).
+
+**Update**:
+
+My learning continues. Loading a Google Map (see my [contact page](https://jamesdmosier.com/contact/) background for this) isn't quite as easy as I was hoping. Currently I have disabled the service worker on my site until I resolve the issues with loading the Google Map from the service worker cache. So please don't think of me as a liar, I promise I had a service worker working on here and it worked beautifully!!
