@@ -5,7 +5,7 @@
   "description": "portfolio website for James Mosier",
   "repository": "https://github.com/jamez14/jdm-v3",
   "scripts": {
-    "start": "webpack-dev-server --config webpack.config.js"
+    "start": "webpack-dashboard -m -- webpack-dev-server --quiet --config webpack.config.js"
   },
   "devDependencies": {
     "css-loader": "^0.26.1",
@@ -14,6 +14,7 @@
     "sass-loader": "^4.0.2",
     "style-loader": "^0.13.1",
     "webpack": "2.1.0-beta.27",
+    "webpack-dashboard": "^0.2.0",
     "webpack-dev-server": "2.1.0-beta.12"
   }
 }

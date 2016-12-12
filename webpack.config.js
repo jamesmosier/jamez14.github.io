@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const DashboardPlugin = require('webpack-dashboard/plugin');
 
 module.exports = {
   context: __dirname + '/src',
@@ -35,5 +36,7 @@ module.exports = {
       filename: "[name].bundle.css",
       allChunks: true,
     }),
+
+    new DashboardPlugin(),
   ],
 };
