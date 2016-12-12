@@ -1,0 +1,12 @@
+$bg: #927979;
+$font: 'Nunito Sans';
+
+@import '_reset.scss';
+
+html, body {
+  font-family: $font, sans-serif;
+}
+
+body {
+  background-color: $bg;
+}
