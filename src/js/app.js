@@ -1,7 +1,13 @@
-import styles from '../sass/app.scss';
+(() => {
+  const elem = document.getElementById('other');
 
-function foo () {
-  console.log('james')
-}
+  const hide = '<span class="mo">mosier</span>';
+  let str = 'james';
+  str += '@';
+  str += hide;
+  str += 'jamesdmosier';
+  str += '&#46;com';
 
-foo();
+  elem.innerHTML = str;
+  elem.href = `mailto:${str.replace(hide, '').replace('&#46;', '.')}`;
+})();

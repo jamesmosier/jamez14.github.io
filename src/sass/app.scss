@@ -19,6 +19,22 @@ main {
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
+  text-align: center;
+}
+
+.hello {
+  font-size: 44px;
+  margin-bottom: 10px;
+}
+
+.about {
+  p {
+    font-size: 22px;
+  }
+}
+
+.mo {
+  display: none;
 }
 
 .external-links {
