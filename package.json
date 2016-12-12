@@ -5,15 +5,7 @@
   "description": "portfolio website for James Mosier",
   "repository": "https://github.com/jamez14/jdm-v3",
   "scripts": {
-    "build-sass": "node-sass './src/sass/app.scss' './assets/css/app.css'",
-    "watch-sass": "nodemon -e scss -w src/sass -x 'npm run build-sass'",
-    "build-js": "babel src/js/app.js --out-file assets/js/app.bundle.js --source-maps inline",
-    "watch-js": "nodemon -e js -w src/js -x 'npm run build-js'",
-    "browsersync": "browser-sync start --files 'assets' --server --reload-delay 500",
-    "watch": "npm run browsersync & npm run watch-js & npm run watch-sass",
-    "build-min-sass": "node-sass './src/sass/app.scss' './assets/css/app.css' && cleancss -o './assets/css/app.min.css' './assets/css/app.css'",
-    "build-min-js": "babel src/js/app.js --out-file assets/js/app.bundle.js && uglifyjs './assets/js/app.bundle.js' -o './assets/js/app.min.js'",
-    "production": "npm run build-min-js & npm run build-min-sass"
+    "start": "nps"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
@@ -22,6 +14,7 @@
     "clean-css": "^3.4.22",
     "node-sass": "^4.0.0",
     "nodemon": "^1.11.0",
+    "p-s": "^3.0.3",
     "uglify-js": "^2.7.5"
   }
 }
