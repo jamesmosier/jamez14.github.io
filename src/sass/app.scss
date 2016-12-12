@@ -1,6 +1,10 @@
 $bg: #927979;
 $font: 'Nunito Sans';
 
+$linkedin: #0077B5;
+$twitter: #1DA1F2;
+$github: #181717;
+
 @import '_reset.scss';
 
 html, body {
@@ -9,4 +13,29 @@ html, body {
 
 body {
   background-color: $bg;
+}
+
+main {
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.external-links {
+
+  a {
+    fill: #000;
+    display: inline-block;
+    text-decoration: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+      fill: #444;
+    }
+  }
+
+  svg {
+    width: 50px;
+  }
 }
