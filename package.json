@@ -5,16 +5,23 @@
   "description": "portfolio website for James Mosier",
   "repository": "https://github.com/jamez14/jdm-v3",
   "scripts": {
-    "start": "webpack-dashboard -m -- webpack-dev-server --quiet --config webpack.config.js"
+    "build-sass": "node-sass './src/sass/app.scss' './assets/css/app.css'",
+    "watch-sass": "nodemon -e scss -w src/sass -x 'npm run build-sass'",
+    "build-js": "babel src/js/app.js --out-file assets/js/app.bundle.js --source-maps inline",
+    "watch-js": "nodemon -e js -w src/js -x 'npm run build-js'",
+    "browsersync": "browser-sync start --files 'assets' --server --reload-delay 500",
+    "watch": "npm run browsersync & npm run watch-js & npm run watch-sass",
+    "build-min-sass": "node-sass './src/sass/app.scss' './assets/css/app.css' && cleancss -o './assets/css/app.min.css' './assets/css/app.css'",
+    "build-min-js": "babel src/js/app.js --out-file assets/js/app.bundle.js && uglifyjs './assets/js/app.bundle.js' -o './assets/js/app.min.js'",
+    "production": "npm run build-min-js & npm run build-min-sass"
   },
   "devDependencies": {
-    "css-loader": "^0.26.1",
-    "extract-text-webpack-plugin": "2.0.0-beta.4",
+    "babel-cli": "^6.18.0",
+    "babel-preset-latest": "^6.16.0",
+    "browser-sync": "^2.18.5",
+    "clean-css": "^3.4.22",
     "node-sass": "^4.0.0",
-    "sass-loader": "^4.0.2",
-    "style-loader": "^0.13.1",
-    "webpack": "2.1.0-beta.27",
-    "webpack-dashboard": "^0.2.0",
-    "webpack-dev-server": "2.1.0-beta.12"
+    "nodemon": "^1.11.0",
+    "uglify-js": "^2.7.5"
   }
 }
