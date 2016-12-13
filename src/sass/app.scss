@@ -29,24 +29,32 @@ main {
 }
 
 .about {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  &-info {
-  }
 
   p {
     font-size: 22px;
     margin: 0;
     padding: 0;
     margin-top: 3px;
-    margin-right: 10px;
+
+    &:nth-of-type(2) {
+      font-size: 20px;
+      margin-top: 25px;
+    }
   }
 }
 
 .mo {
   display: none;
+}
+
+#other {
+  color: #2d2d2d;
+  text-decoration: none;
+
+  &:hover {
+    color: #000;
+    text-decoration: underline;
+  }
 }
 
 .external-links {

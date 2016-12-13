@@ -2,7 +2,7 @@
   const elem = document.getElementById('other');
 
   const hide = '<span class="mo">mosier</span>';
-  let str = 'james';
+  let str = 'hi';
   str += '@';
   str += hide;
   str += 'jamesdmosier';
