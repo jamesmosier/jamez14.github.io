@@ -12,6 +12,7 @@ li {
   list-style: none; }
 
 html, body {
+  color: #fff;
   font-family: "Nunito Sans", sans-serif; }
 
 body {
@@ -24,6 +25,7 @@ main {
   text-align: center; }
 
 .hello {
+  color: #000;
   margin-bottom: 50px;
   margin-top: 40px;
   font-size: 54px; }

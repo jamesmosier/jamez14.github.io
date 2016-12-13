@@ -8,6 +8,7 @@ $github: #181717;
 @import '_reset.scss';
 
 html, body {
+  color: #fff;
   font-family: $font, sans-serif;
 }
 
@@ -23,6 +24,7 @@ main {
 }
 
 .hello {
+  color: #000;
   margin-bottom: 50px;
   margin-top: 40px;
   font-size: 54px;
