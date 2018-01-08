@@ -1,2 +1,3 @@
-##James D. Mosier (me!) personal portfolio site, version 4.0##
+# Personal portfolio site
+### version 4.0
 
