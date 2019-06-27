@@ -1,20 +1,15 @@
 {
   "name": "jdm-v4",
   "private": true,
-  "version": "4.0.0",
-  "description": "portfolio website for James Mosier",
-  "repository": "https://github.com/jamez14/jdm-v3",
+  "version": "4.1.0",
+  "description": "website for James Mosier",
+  "repository": "https://github.com/jamesmosier/jamez14.github.io",
   "scripts": {
-    "start": "nps"
+    "build": "./node_modules/.bin/cleancss -o './assets/css/app.min.css' './src/css/app.css'",
+    "dev-server": "./node_modules/.bin/http-server -p 8080"
   },
   "devDependencies": {
-    "babel-cli": "^6.18.0",
-    "babel-preset-latest": "^6.16.0",
-    "browser-sync": "^2.18.5",
-    "clean-css": "^3.4.22",
-    "node-sass": "^4.0.0",
-    "nodemon": "^1.11.0",
-    "p-s": "^3.0.3",
-    "uglify-js": "^2.7.5"
+    "clean-css-cli": "4.3.0",
+    "http-server": "^0.11.1"
   }
 }
