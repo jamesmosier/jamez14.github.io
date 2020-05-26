@@ -28,11 +28,14 @@ li {
 html,
 body {
   color: #fff;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
+    sans-serif, Apple Color Emoji, Segoe UI Emoji;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 body {
-  background-color: #528fbb;
+  background-color: #366486;
 }
 
 main {
@@ -42,47 +45,62 @@ main {
   text-align: center;
 }
 
-.hello {
-  color: #000;
-  margin-bottom: 50px;
+h1 {
+  color: #d8d8d8;
+  margin-bottom: 20px;
   margin-top: 40px;
-  font-size: 54px;
+  font-size: 3.375rem;
+}
+
+.about {
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media only screen and (min-width: 800px) {
+  .about {
+    width: 50%;
+  }
 }
 
 .about p {
-  font-size: 22px;
+  font-size: 1.2rem;
   margin: 0;
   padding: 0;
   margin-top: 3px;
 }
 
-.about p:nth-of-type(2) {
-  font-size: 20px;
-  margin-top: 25px;
+.about p:first-of-type {
+  font-size: 1.6rem;
+}
+
+.about p:last-of-type {
+  font-size: 1rem;
+  margin-top: 2.5rem;
 }
 
 .mo {
   display: none;
 }
 
-#other {
-  color: #2d2d2d;
-  text-decoration: none;
-}
-
-#other:hover {
-  color: #000;
+a {
+  color: #eaeef9;
   text-decoration: underline;
 }
 
+a:hover {
+  color: #cbdbe6;
+  text-decoration: none;
+}
+
 .external-links {
-  margin-top: 60px;
-  margin-bottom: 50px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .external-links a {
   display: inline-block;
-  fill: #000;
+  fill: #eaeef9;
   margin: 0 20px;
   text-decoration: none;
 }
@@ -90,9 +108,16 @@ main {
 .external-links a:hover,
 .external-links a:active,
 .external-links a:focus {
-  fill: #444;
+  fill: #cbdbe6;
 }
 
 .external-links svg {
   width: 50px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
