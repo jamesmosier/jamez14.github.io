@@ -11,7 +11,7 @@
     <title>James D. Mosier | Software Engineer</title>
     <meta
       name="description"
-      content="James Mosier is a software engineer from Akron, Ohio. He specializes in JavaScript, NodeJS, C#, Kotlin, Swift along with HTML, CSS, &amp; more."
+      content="James Mosier is a software engineer from Akron, Ohio. He specializes in full stack development, with a love of JavaScript."
     />
 
     <link
@@ -40,21 +40,12 @@
       <h1>Hi, I'm James.</h1>
 
       <div class="about">
-        <p>I'm a Software Engineer (and love JavaScript!).</p>
-        <p style="margin-top: 1rem;">
-          I have a passion for accessibility, performance, and shipping awesome
-          products that make people happy!
-        </p>
-        <p style="margin-top: 1rem;">In my spare time, I love helping out with <a href="https://github.com/vercel/next.js/discussions" target="_blank" rel="nofollow noopener">Next.js</a> and answering questions on <a href="https://stackoverflow.com/users/1554860/james" target="_blank" rel="nofollow noopener">Stack Overflow</a></p>
+        <p>I'm a software engineer.</p>
         <p>Find out what I am up to below...</p>
       </div>
 
       <div class="external-links">
-        <a
-          href="https://github.com/jamesmosier"
-          target="_blank"
-          rel="nofollow noopener"
-        >
+        <a href="https://github.com/jamesmosier" target="_blank">
           <span class="sr-only">My GitHub profile</span>
           <svg viewBox="0 0 16 16" aria-labelledby="ghTitle">
             <title id="ghTitle">GitHub icon</title>
@@ -64,26 +55,7 @@
           </svg>
         </a>
 
-        <a
-          href="https://twitter.com/jamesdmosier"
-          target="_blank"
-          rel="nofollow noopener"
-        >
-          <span class="sr-only">My Twitter profile</span>
-          <svg viewBox="0 0 16 16" aria-labelledby="twtrTitle">
-            <title id="twtrTitle">Twitter icon</title>
-            <path
-              d="M16 3.038c-.59.26-1.22.437-1.885.517.677-.407 1.198-1.05 1.443-1.816-.634.375-1.337.648-2.085.795-.598-.638-1.45-1.036-2.396-1.036-1.812 0-3.282 1.468-3.282 3.28 0 .258.03.51.085.75C5.152 5.39 2.733 4.084 1.114 2.1.83 2.583.67 3.147.67 3.75c0 1.14.58 2.143 1.46 2.732-.538-.017-1.045-.165-1.487-.41v.04c0 1.59 1.13 2.918 2.633 3.22-.276.074-.566.114-.865.114-.21 0-.416-.02-.617-.058.418 1.304 1.63 2.253 3.067 2.28-1.124.88-2.54 1.404-4.077 1.404-.265 0-.526-.015-.783-.045 1.453.93 3.178 1.474 5.032 1.474 6.038 0 9.34-5 9.34-9.338 0-.143-.004-.284-.01-.425.64-.463 1.198-1.04 1.638-1.7z"
-              fill-rule="nonzero"
-            />
-          </svg>
-        </a>
-
-        <a
-          href="https://www.linkedin.com/in/jamesdmosier"
-          target="_blank"
-          rel="nofollow noopener"
-        >
+        <a href="https://www.linkedin.com/in/jamesdmosier" target="_blank">
           <span class="sr-only">My LinkedIn profile</span>
           <svg viewBox="0 0 16 16" aria-labelledby="linkedinTitle">
             <title id="linkedinTitle">LinkedIn icon</title>
@@ -104,15 +76,18 @@
       (function () {
         const element = document.getElementById('other');
 
-        const hide = '<span class="mo">mosier</span>';
-        let str = 'james+hi';
-        str += '@';
-        str += hide;
-        str += 'jamesdmosier';
-        str += '&#46;com';
+        const localPart = ['james', '+hi'];
+        const domainPart = ['jamesdmosier', '.com'];
+        const hiddenText = '<span class="mo">mosier</span>';
 
-        element.innerHTML = str;
-        element.href = `mailto:${str.replace(hide, '').replace('&#46;', '.')}`;
+        // Combine the parts dynamically
+        const email = `${localPart.join('')}@${hiddenText}${domainPart.join(
+          ''
+        )}`;
+
+        // Render the email link
+        element.innerHTML = email;
+        element.href = `mailto:${localPart.join('')}@${domainPart.join('')}`;
       })();
     </script>
     <script>
