@@ -1,0 +1,31 @@
+<html lang="en">
+  <head>
+    <meta name="robots" content="noindex,nofollow" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Turnstile Test</title>
+  </head>
+  <body>
+    <form action="/foo" method="POST">
+      <input type="text" placeholder="name" />
+      <input type="text" placeholder="username" />
+      <div id="example"></div>
+      <button type="submit" value="Submit">Submit</button>
+    </form>
+
+    <script
+      src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback"
+      defer
+    ></script>
+    <script type="text/javascript">
+      window.onloadTurnstileCallback = function () {
+        turnstile.render('#example', {
+          sitekey: '0x4AAAAAAA4dfeSfN6rWKUAT',
+          callback: function (token) {
+            console.log('Challenge Success ' + token);
+          },
+        });
+      };
+    </script>
+  </body>
+</html>
